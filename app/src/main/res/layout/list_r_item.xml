@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#da7775"
+    android:minHeight="60dp"
+    android:text="ITEMS"
+    android:textColor="#009688"
+    android:textStyle="bold"
+    android:gravity="center_vertical"
+    android:drawableLeft="@mipmap/rlanguageitem"
+    android:padding="10dp"
+    android:drawablePadding="10dp"
+    android:textSize="20dp"
+    android:id="@+id/listritems">
+</TextView>

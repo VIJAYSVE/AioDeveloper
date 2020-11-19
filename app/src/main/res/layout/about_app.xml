@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#c29292">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="5dp"
+        android:id="@+id/aboutaio"
+        android:background="@drawable/logo"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Programming Kit"
+        android:id="@+id/kit"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/aboutaio"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/aboutapp"
+        android:id="@+id/purpose"
+        android:textStyle="italic"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:textSize="20dp"
+        android:layout_below="@+id/kit"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="40dp"/>
+    <TextView
+        android:id="@+id/eager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="We are eager for your queries:--"
+        android:layout_below="@+id/purpose"
+        android:textStyle="bold|italic"
+        android:paddingLeft="40dp"
+        android:textSize="17dp"
+        android:layout_marginTop="30dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/eager"
+        android:paddingLeft="40dp"
+        android:id="@+id/gmail"
+        android:layout_marginTop="5dp"
+        android:text="gla.programmingkit@gmail.com"
+        android:textColor="#656b79"
+        android:textSize="16dp"
+        android:textStyle="bold"/>
+
+</RelativeLayout>

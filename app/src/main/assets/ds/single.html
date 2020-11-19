@@ -1,0 +1,65 @@
+<html>
+<body>
+
+
+
+<h2 class="center" style="text-align: center;"><span style="color: #333399;">Linked List in C</span></h2>
+<p>Linked list is a special type of data structure where all data elements are linked to one another. Linked list is the collection of nodes and every nodes contains two parts data part and address part.</p>
+<p><img title="linked list" src="linked-list.png" alt="linked list" /></p>
+<h3 class="voiletcolor">Why use Linked List</h3>
+<p>Suppose you want ot store marks of 50 students, so need to write code like below;</p>
+<div class="example">
+    <h2 class="example">Example</h2>
+<pre class="prettyprint prettyprinted">
+<span class="kwd">int</span><span class="pln"> marks</span><span class="pun">[</span><span class="lit">50</span><span class="pun">];</span></pre>
+</div>
+<p>But some time you need to store more than 50 students marks, in that case you can not increase memory of array, and some time you need to store less than 50 students marks in this case extra memory will be wastage. To overcome this problem you need to use Linked List because in linked list memory will be created at run time.</p>
+<h3 class="voiletcolor">Advantages of linked list</h3>
+<ul class="list">
+    <li>Linked List is Dynamic data Structure.</li>
+    <li>You can change size of Linked List during program run time.</li>
+    <li>Insertion and Deletion Operations are Easier, you can insert any node at any place and also delete any node easily..</li>
+    <li>No memory wastage ,i.e no need to pre-allocate memory</li>
+    <li>Faster Access time,can be expanded in constant time without memory overhead</li>
+    <li>You can easily implement Linear Data Structures such as Stack,Queue using Linked list</li>
+</ul>
+<h3 class="voiletcolor">Advantages of linked list</h3>
+<ul class="list">
+    <li><strong>Dynamic Data Structure: </strong>The size of linked list increase and decrease during program execution.</li>
+    <li><strong>No memory wastage: </strong>In linked list memory will be allocated at the time of program execution so no memory wastage.</li>
+    <li><strong>Easily insert and delete data: </strong>In linked list you can insert any data at specific position and also delete any data from specific position.</li>
+</ul>
+<h3 class="bluecolor">Dis-Advantages of linked list</h3>
+<ul class="list">
+    <li><strong>Need more memory: </strong>For store data in linked list you need more memory space, you need memory space for both data and address part.</li>
+</ul>
+<h3>Real life example of Linked list</h3>
+<p>A common example of linked list is train, in this case all the buggies are nodes and two coaches are connected using the connectors, peoples seating arrangement inside the coaches is called as data part of linked list while connection between two buggies is address filed of linked list.</p>
+<p><img title="linked list" src="linked-list-example.png" alt="linked list" /></p>
+<p>Like linked list, trains also have last coach which is not further connected to any of the buggies. Engine can be called as first node of linked list and last buggies are last node of linked list.</p>
+<p>&nbsp;</p>
+<p style="text-align: left;"><span style="font-size: 18pt; color: #800000;">1. Singly Linked List:--</span><br />Singly linked lists are one of the most primitive data structures you will find in<br />this book. Each node that makes up a singly linked list consists of a value, and<br />a reference to the next node (if any) in the list.</p>
+<p><img src="single.png" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt;"><strong>1.1 Insertion:-</strong></span><br />In general when people talk about insertion with respect to linked lists of any<br />form they implicitly refer to the adding of a node to the tail of the list. When<br />you use an API like that of DSA and you see a general purpose method that<br />adds a node to the list, you can assume that you are adding the node to the tail<br />of the list not the head.<br />Adding a node to a singly linked list has only two cases:<br />1. head = &empty; in which case the node we are adding is now both the head and<br />tail of the list; or<br />2. we simply need to append our node onto the end of the list updating the<br />tail reference appropriately.<br />1) algorithm Add(value)<br />2) Pre: value is the value to add to the list<br />3) Post: value has been placed at the tail of the list<br />4) n &larr; node(value)<br />5) if head = &empty;<br />6) head &larr; n<br />7) tail &larr; n<br />8) else<br />9) tail.Next &larr; n<br />10) tail &larr; n<br />11) end if<br />12) end Add<br />As an example of the previous algorithm consider adding the following sequence<br />of integers to the list: 1, 45, 60, and 12, the resulting list is that of<br />Figure 2.2.</p>
+<p>&nbsp;</p>
+<p><br /><span style="font-size: 12pt;"><strong>1.2 Searching:-</strong></span><br />Searching a linked list is straightforward: we simply traverse the list checking<br />the value we are looking for with the value of each node in the linked list. The<br />algorithm listed in this section is very similar to that used for traversal in &sect;2.1.4.</p>
+<p><br />1) algorithm Contains(head, value)<br />2) Pre: head is the head node in the list<br />3) value is the value to search for<br />4) Post: the item is either in the linked list, true; otherwise false<br />5) n &larr; head<br />6) while n 6= &empty; and n.Value 6= value<br />7) n &larr; n.Next<br />8) end while<br />9) if n = &empty;<br />10) return false<br />11) end if<br />12) return true<br />13) end Contains</p>
+<p>&nbsp;</p>
+<p><br /><span style="font-size: 12pt;"><strong>1.3 Deletion:-</strong></span><br />Deleting a node from a linked list is straightforward but there are a few cases<br />we need to account for:<br />1. the list is empty; or<br />2. the node to remove is the only node in the linked list; or<br />3. we are removing the head node; or<br />4. we are removing the tail node; or<br />5. the node to remove is somewhere in between the head and tail; or<br />6. the item to remove doesn&rsquo;t exist in the linked list<br />The algorithm whose cases we have described will remove a node from anywhere<br />within a list irrespective of whether the node is the head etc. If you know<br />that items will only ever be removed from the head or tail of the list then you<br />can create much more concise algorithms. In the case of always removing from<br />the front of the linked list deletion becomes an O(1) operation.</p>
+<p><br />1) algorithm Remove(head, value)<br />2) Pre: head is the head node in the list<br />3) value is the value to remove from the list<br />4) Post: value is removed from the list, true; otherwise false<br />5) if head = &empty;<br />6) // case 1<br />7) return false<br />8) end if<br />9) n &larr; head<br />10) if n.Value = value<br />11) if head = tail<br />12) // case 2<br />13) head &larr; &empty;<br />14) tail &larr; &empty;<br />15) else<br />16) // case 3<br />17) head &larr; head.Next<br />18) end if<br />19) return true<br />20) end if<br />21) while n.Next 6= &empty; and n.Next.Value 6= value<br />22) n &larr; n.Next<br />23) end while<br />24) if n.Next 6= &empty;<br />25) if n.Next = tail<br />26) // case 4<br />27) tail &larr; n<br />28) end if<br />29) // this is only case 5 if the conditional on line 25 was f alse<br />30) n.Next &larr; n.Next.Next<br />31) return true<br />32) end if<br />33) // case 6<br />34) return false<br />35) end Remove</p>
+<p><br /><span style="font-size: 12pt;"><strong>1.4 Traversing the list:-</strong></span><br />Traversing a singly linked list is the same as that of traversing a doubly linked<br />list (defined in &sect;2.2). You start at the head of the list and continue until you<br />come across a node that is &empty;. The two cases are as follows:<br />1. node = &empty;, we have exhausted all nodes in the linked list; or<br />2. we must update the node reference to be node.Next.<br />The algorithm described is a very simple one that makes use of a simple<br />while loop to check the first case.</p>
+<p><br />1) algorithm Traverse(head)<br />2) Pre: head is the head node in the list<br />3) Post: the items in the list have been traversed<br />4) n &larr; head<br />5) while n 6= 0<br />6) yield n.Value<br />7) n &larr; n.Next<br />8) end while<br />9) end Traverse<br />2.1.5 Traversing the list in reverse order<br />Traversing a singly linked list in a forward manner (i.e. left to right) is simple<br />as demonstrated in &sect;2.1.4. However, what if we wanted to traverse the nodes in<br />the linked list in reverse order for some reason? The algorithm to perform such<br />a traversal is very simple, and just like demonstrated in &sect;2.1.3 we will need to<br />acquire a reference to the predecessor of a node, even though the fundamental<br />characteristics of the nodes that make up a singly linked list make this an<br />expensive operation. For each node, finding its predecessor is an O(n) operation,<br />so over the course of traversing the whole list backwards the cost becomes O(n<br />2<br />).<br />Figure 2.3 depicts the following algorithm being applied to a linked list with<br />the integers 5, 10, 1, and 40.<br />1) algorithm ReverseTraversal(head, tail)<br />2) Pre: head and tail belong to the same list<br />3) Post: the items in the list have been traversed in reverse order<br />4) if tail 6= &empty;<br />5) curr &larr; tail<br />6) while curr 6= head<br />7) prev &larr; head<br />8) while prev.Next 6= curr<br />9) prev &larr; prev.Next<br />10) end while<br />11) yield curr.Value<br />12) curr &larr; prev<br />13) end while<br />14) yield curr.Value<br />15) end if<br />16) end ReverseTraversal</p>
+<p style="text-align: left;">&nbsp;</p>
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<h1 class="h1-tutorial" style="text-align: center;"><span style="font-size: 14pt;">SQL <span class="hh1"><span style="color: #ff6600;">RIGHT JOIN</span></span></span></h1>
+<div class="define">
+<ul>
+<li style="text-align: justify;"><span style="font-size: 12pt;"><span style="color: #008000;">RIGHT JOIN</span> performs a join starting with the second (right-most) table and then any matching first (left-most) table records.</span></li>
+<li style="text-align: justify;"><span style="font-size: 12pt;"><span style="color: #008000;">RIGHT JOIN</span> and <span style="color: #008000;">RIGHT OUTER JOIN</span> are the same.</span></li>
+</ul>
+<p style="text-align: justify;">&nbsp;</p>
+</div>
+<p style="text-align: justify;"><span style="font-size: 12pt;"><img class="img-responsive" style="display: block; margin-left: auto; margin-right: auto;" src="sql-right-join.png" /></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">&nbsp;</p>
+<h2 style="text-align: justify;"><span style="font-size: 12pt;">The SQL RIGHT JOIN syntax</span></h2>
+<p style="text-align: justify;"><br /><span style="font-size: 12pt;">The general syntax is: </span></p>
+<ol class="linenums" style="text-align: justify;">
+<li class="L0"><span style="font-size: 12pt;"><span class="pln"><span style="color: #800000;">SELECT</span> column</span><span class="pun">-</span><span class="pln">names</span></span></li>
+<li class="L1"><span style="font-size: 12pt;"><span class="pln"> <span style="color: #800000;">FROM</span> table</span><span class="pun">-</span><span class="pln">name1 <span style="color: #800000;">RIGHT JOIN</span> table</span><span class="pun">-</span><span class="pln">name2 </span></span></li>
+<li class="L2"><span style="font-size: 12pt;"><span class="pln"> <span style="color: #800000;">ON</span> column</span><span class="pun">-</span><span class="pln">name1 </span><span class="pun">=</span><span class="pln"> column</span><span class="pun">-</span><span class="pln">name2</span></span></li>
+<li class="L3"><span class="pln" style="font-size: 12pt;"> <span style="color: #800000;">WHERE</span> condition</span></li>
+</ol>
+<p style="text-align: justify;"><br /><span style="font-size: 12pt;">The general RIGHT OUTER JOIN syntax is: </span></p>
+<ol class="linenums" style="text-align: justify;">
+<li class="L0"><span style="font-size: 12pt;"><span class="pln">SELECT column</span><span class="pun">-</span><span class="pln">names</span></span></li>
+<li class="L1"><span style="font-size: 12pt;"><span class="pln"> FROM table</span><span class="pun">-</span><span class="pln">name1 RIGHT OUTER JOIN table</span><span class="pun">-</span><span class="pln">name2 </span></span></li>
+<li class="L2"><span style="font-size: 12pt;"><span class="pln"> ON column</span><span class="pun">-</span><span class="pln">name1 </span><span class="pun">=</span><span class="pln"> column</span><span class="pun">-</span><span class="pln">name2</span></span></li>
+<li class="L3"><span class="pln" style="font-size: 12pt;"> WHERE condition</span></li>
+</ol>
+<p style="text-align: justify;">&nbsp;</p>
+<h2 style="text-align: justify;"><span style="font-size: 12pt;">SQL RIGHT JOIN Example:-</span></h2>
+<p style="text-align: justify;"><span class="pln" style="font-size: 12pt;"><strong>Problem<span style="color: #008000;">:</span><span style="color: #008000;"> List customers that have not placed orders</span> </strong><br /><br /></span></p>
+<ol class="linenums" style="text-align: justify;">
+<li class="L0"><span style="font-size: 12pt;"><span class="pln"><span style="color: #008000;">SELECT</span> </span><span class="typ">TotalAmount</span><span class="pun">,</span> <span class="typ">FirstName</span><span class="pun">,</span> <span class="typ">LastName</span><span class="pun">,</span> <span class="typ">City</span><span class="pun">,</span> <span class="typ">Country</span></span></li>
+<li class="L1"><span style="font-size: 12pt;"><span class="pln"> <span style="color: #008000;">FROM</span> </span><span class="pun">[</span><span class="typ">Order</span><span class="pun">]</span><span class="pln"> O <span style="color: #008000;">RIGHT JOIN</span> </span><span class="typ">Customer</span><span class="pln"> C</span></span></li>
+<li class="L2"><span style="font-size: 12pt;"><span class="pln"> <span style="color: #008000;">ON</span> O</span><span class="pun">.</span><span class="typ">CustomerId</span> <span class="pun">=</span><span class="pln"> C</span><span class="pun">.</span><span class="typ">Id</span></span></li>
+<li class="L3"><span style="font-size: 12pt;"><span class="pln"><span style="color: #008000;">WHERE</span> </span><span class="typ">TotalAmount</span><span class="pln"> <span style="color: #008000;">IS NULL</span></span></span></li>
+</ol>
+<p style="text-align: justify;"><span class="pln" style="font-size: 12pt;"><br />This returns customers that, when joined, have no matching order. <br /><br /><strong>Results:</strong> 2 records <br /><br /></span></p>
+<div class="table-hscroll">
+<table class="table table-striped table-condensed">
+<tbody>
+<tr>
+<th><span style="font-size: 12pt;">TotalAmount</span></th>
+<th><span style="font-size: 12pt;">FirstName</span></th>
+<th><span style="font-size: 12pt;">LastName</span></th>
+<th><span style="font-size: 12pt;">City</span></th>
+<th><span style="font-size: 12pt;">Country</span></th>
+</tr>
+<tr>
+<td class="null"><span style="font-size: 12pt;">NULL</span></td>
+<td><span style="font-size: 12pt;">Diego</span></td>
+<td><span style="font-size: 12pt;">Roel</span></td>
+<td><span style="font-size: 12pt;">Madrid</span></td>
+<td><span style="font-size: 12pt;">Spain</span></td>
+</tr>
+<tr>
+<td class="null"><span style="font-size: 12pt;">NULL</span></td>
+<td><span style="font-size: 12pt;">Marie</span></td>
+<td><span style="font-size: 12pt;">Bertrand</span></td>
+<td><span style="font-size: 12pt;">Paris</span></td>
+<td><span style="font-size: 12pt;">France</span></td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">&nbsp;</p>
+</div>

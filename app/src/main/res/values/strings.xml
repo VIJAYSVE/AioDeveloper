@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">AioDeveloper</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Welcome to</string>
+    <string name="slide_1_title2">Programming KIT</string>
+    <string name="slide_desc">This KIT contains different types of programming languages.</string>
+
+
+    <string name="slide_2_title">Movie Tickets</string>
+    <string name="slide_2_desc">Book movie tickets for your family and friends!</string>
+
+    <string name="slide_3_title">Easy Navigation</string>
+    <string name="slide_3_desc">You can swipe/click the navigation to access other Learning Sections.</string>
+
+    <string name="slide_4_title">Learn and Understand</string>
+    <string name="slide_4_desc">Clear out your concepts with the help of Theory and Programs.</string>
+
+    <string name="aboutapp">This App will teach you basic programming skills and will also take you through some advance concepts related to programming and technical development.
+    </string>
+    <string name="aboutaim">The main aim of this kit is to provide different programming languages to develop and enhance programming skills.
+    The whole purpose of this application is to turn mirrors into windows.</string>
+    <string name="title_activity_rlist">RListActivity</string>
+</resources>

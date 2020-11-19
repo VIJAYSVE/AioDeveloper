@@ -1,0 +1,185 @@
+<html>
+<body>
+
+
+
+<h2 class="center" style="text-align: center;">Queue in C</h2>
+<p>Queue is work on the principal of <strong>First-In-First-Out (FIFO)</strong>, it means first entered item remove first. Queue have two end front and rear, from front you can insert element and from rear you can delete element.</p>
+<p><img title="Queue" src="queue.png" alt="queue" /></p>
+<h3 class="voiletcolor">Real life example of Queue</h3>
+<p>A common example of queue is movie theater ticket counter, there first person who stand in front of ticket window take ticket first and remove from line and new person always stand in line from end.</p>
+<h3>Application of Queue Data Structure in C++</h3>
+<p>Queues are used for any situation where you want to efficiently maintain a First-in-first out order on some entities. Transport and operations research where various entities are stored and held to be processed later i.e the queue performs the function of a buffer.</p>
+<p>In a multitasking operating system, the CPU cannot run all jobs at once, so jobs must be batched up and then scheduled according to some policy. Again, a queue might be a suitable option in this case.</p>
+<h3>Operation on a queue</h3>
+<p>The basic operation that can be perform on queue are;</p>
+<ul class="list">
+    <li>Insert an element in a queue.</li>
+    <li>Delete an element from the queue.</li>
+</ul>
+<h3>Insert an element in a queue.</h3>
+<p><img title="Queue" src="queue-insert-item.gif" alt="insert date in queue" /></p>
+<p>In queue insert any element form <strong>Rear</strong>. If you insert new element in queue value of Rear will be increased by 1.</p>
+<div class="example">
+    <h2 class="example">Insert element in queue</h2>
+<pre class="prettyprint prettyprinted">
+<span class="kwd">void</span><span class="pln"> insert</span><span class="pun">()</span>
+<span class="pun">{</span>
+<span class="kwd">int</span><span class="pln"> item</span><span class="pun">;</span><span class="pln">
+printf</span><span class="pun">(</span><span class="str">"Element : "</span><span class="pun">);</span><span class="pln">
+scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,&amp;</span><span class="pln">item</span><span class="pun">);</span>
+<span class="kwd">if</span><span class="pun">(</span><span class="pln">front</span><span class="pun">==(</span><span class="pln">rear</span><span class="pun">+</span><span class="lit">1</span><span class="pun">)%</span><span class="lit">3</span><span class="pun">)</span>
+<span class="pun">{</span><span class="pln">
+printf</span><span class="pun">(</span><span class="str">"Queue is Full"</span><span class="pun">);</span>
+<span class="kwd">return</span><span class="pun">;</span>
+<span class="pun">}</span>
+<span class="kwd">if</span><span class="pun">(</span><span class="pln">front</span><span class="pun">==-</span><span class="lit">1</span><span class="pun">)</span>
+<span class="pun">{</span><span class="pln">
+rear</span><span class="pun">=</span><span class="pln">front</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span>
+<span class="pun">}</span>
+<span class="kwd">else</span>
+<span class="pun">{</span><span class="pln">
+rear</span><span class="pun">=(</span><span class="pln">rear</span><span class="pun">+</span><span class="lit">1</span><span class="pun">)%</span><span class="lit">3</span><span class="pun">;</span>
+<span class="pun">}</span><span class="pln">
+cque</span><span class="pun">.</span><span class="pln">cqueue</span><span class="pun">[</span><span class="pln">rear</span><span class="pun">]=</span><span class="pln">item</span><span class="pun">;</span><span class="pln">
+printf</span><span class="pun">(</span><span class="str">"Successfully Insert"</span><span class="pun">);</span>
+<span class="pun">}</span></pre>
+</div>
+<h3>Delete any element from the queue.</h3>
+<p><img title="Queue" src="queue-delete-item.gif" alt="delete date in queue" /></p>
+<p>In queue delete an element form <strong>Front</strong>. If you delete an element from queue value of Front will be increased by 1.</p>
+<div class="example">
+    <h2 class="example">Delete element from queue</h2>
+<pre class="prettyprint prettyprinted">
+<span class="kwd">void</span> <span class="kwd">del</span><span class="pun">()</span>
+<span class="pun">{</span>
+<span class="kwd">int</span><span class="pln"> num</span><span class="pun">;</span>
+<span class="kwd">if</span><span class="pun">(</span><span class="pln">front</span><span class="pun">==-</span><span class="lit">1</span><span class="pun">)</span>
+<span class="pun">{</span><span class="pln">
+printf</span><span class="pun">(</span><span class="str">"Queue Empty"</span><span class="pun">);</span>
+<span class="kwd">return</span><span class="pun">;</span>
+<span class="pun">}</span>
+<span class="kwd">else</span>
+<span class="pun">{</span><span class="pln">
+num</span><span class="pun">=</span><span class="pln">cque</span><span class="pun">.</span><span class="pln">cqueue</span><span class="pun">[</span><span class="pln">front</span><span class="pun">];</span><span class="pln">
+printf</span><span class="pun">(</span><span class="str">"Deleted item : %d"</span><span class="pun">,</span><span class="pln">num</span><span class="pun">);</span>
+<span class="pun">}</span>
+<span class="kwd">if</span><span class="pun">(</span><span class="pln">front</span><span class="pun">==</span><span class="pln">rear</span><span class="pun">)</span>
+<span class="pun">{</span><span class="pln">
+front</span><span class="pun">=-</span><span class="lit">1</span><span class="pun">;</span>
+<span class="pun">}</span>
+<span class="kwd">else</span><span class="pln">
+front</span><span class="pun">=(</span><span class="pln">front</span><span class="pun">+</span><span class="lit">1</span><span class="pun">)%</span><span class="lit">3</span><span class="pun">;</span>
+<span class="pun">}</span></pre>
+</div>
+<div class="example">
+    <h2 class="example">Example of Queue</h2>
+<pre class="prettyprint prettyprinted">
+<span class="com">#include</span><span class="str">&lt;stdio.h&gt;</span>
+<span class="com">#include</span><span class="str">&lt;conio.h&gt;</span>
+
+<span class="kwd">void</span><span class="pln"> insert</span><span class="pun">();</span>
+<span class="kwd">void</span> <span class="kwd">del</span><span class="pun">();</span>
+<span class="kwd">void</span><span class="pln"> display</span><span class="pun">();</span>
+
+<span class="kwd">struct</span><span class="pln"> circ
+</span><span class="pun">{</span>
+<span class="kwd">int</span><span class="pln"> cqueue</span><span class="pun">[</span><span class="lit">5</span><span class="pun">];</span>
+<span class="pun">};</span>
+
+<span class="kwd">struct</span><span class="pln">  circ cque</span><span class="pun">;</span>
+<span class="kwd">int</span><span class="pln"> rear</span><span class="pun">=</span><span class="lit">0</span><span class="pun">,</span><span class="pln">front</span><span class="pun">=-</span><span class="lit">1</span><span class="pun">;</span>
+
+<span class="kwd">void</span><span class="pln"> main</span><span class="pun">()</span>
+<span class="pun">{</span>
+<span class="kwd">while</span><span class="pun">(</span><span class="lit">1</span><span class="pun">)</span>
+<span class="pun">{</span>
+<span class="kwd">int</span><span class="pln"> num</span><span class="pun">;</span><span class="pln">
+ clrscr</span><span class="pun">();</span><span class="pln">
+printf</span><span class="pun">(</span><span class="str">"1.Insertion\n2.Deletion\n3.Display\n0.Exit\n"</span><span class="pun">);</span><span class="pln">
+printf</span><span class="pun">(</span><span class="str">"\n\nSelect Option : "</span><span class="pun">);</span><span class="pln">
+scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,&amp;</span><span class="pln">num</span><span class="pun">);</span>
+<span class="kwd">switch</span><span class="pun">(</span><span class="pln">num</span><span class="pun">)</span>
+<span class="pun">{</span>
+<span class="kwd">case</span> <span class="lit">1</span><span class="pun">:</span><span class="pln">
+insert</span><span class="pun">();</span>
+<span class="kwd">break</span><span class="pun">;</span>
+<span class="kwd">case</span> <span class="lit">2</span><span class="pun">:</span>
+<span class="kwd">del</span><span class="pun">();</span>
+<span class="kwd">break</span><span class="pun">;</span>
+<span class="kwd">case</span> <span class="lit">3</span><span class="pun">:</span><span class="pln">
+display</span><span class="pun">();</span>
+<span class="kwd">break</span><span class="pun">;</span>
+<span class="kwd">case</span> <span class="lit">0</span><span class="pun">:</span>
+<span class="kwd">exit</span><span class="pun">(</span><span class="lit">0</span><span class="pun">);</span>
+<span class="kwd">break</span><span class="pun">;</span>
+<span class="kwd">default</span><span class="pun">:</span><span class="pln">
+printf</span><span class="pun">(</span><span class="str">"\n\n Invalid Option "</span><span class="pun">);</span>
+<span class="pun">}</span><span class="pln">
+getch</span><span class="pun">();</span>
+<span class="pun">}</span>
+<span class="pun">}</span>
+
+<span class="kwd">void</span><span class="pln"> insert</span><span class="pun">()</span>
+<span class="pun">{</span>
+<span class="kwd">int</span><span class="pln"> item</span><span class="pun">;</span><span class="pln">
+printf</span><span class="pun">(</span><span class="str">"Element : "</span><span class="pun">);</span><span class="pln">
+scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,&amp;</span><span class="pln">item</span><span class="pun">);</span>
+<span class="kwd">if</span><span class="pun">(</span><span class="pln">front</span><span class="pun">==(</span><span class="pln">rear</span><span class="pun">+</span><span class="lit">1</span><span class="pun">)%</span><span class="lit">3</span><span class="pun">)</span>
+<span class="pun">{</span><span class="pln">
+printf</span><span class="pun">(</span><span class="str">"Queue is Full"</span><span class="pun">);</span>
+<span class="kwd">return</span><span class="pun">;</span>
+<span class="pun">}</span>
+<span class="kwd">if</span><span class="pun">(</span><span class="pln">front</span><span class="pun">==-</span><span class="lit">1</span><span class="pun">)</span>
+<span class="pun">{</span><span class="pln">
+rear</span><span class="pun">=</span><span class="pln">front</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span>
+<span class="pun">}</span>
+<span class="kwd">else</span>
+<span class="pun">{</span><span class="pln">
+rear</span><span class="pun">=(</span><span class="pln">rear</span><span class="pun">+</span><span class="lit">1</span><span class="pun">)%</span><span class="lit">3</span><span class="pun">;</span>
+<span class="pun">}</span><span class="pln">
+cque</span><span class="pun">.</span><span class="pln">cqueue</span><span class="pun">[</span><span class="pln">rear</span><span class="pun">]=</span><span class="pln">item</span><span class="pun">;</span><span class="pln">
+printf</span><span class="pun">(</span><span class="str">"Successfully Insert"</span><span class="pun">);</span>
+<span class="pun">}</span>
+
+<span class="kwd">void</span> <span class="kwd">del</span><span class="pun">()</span>
+<span class="pun">{</span>
+<span class="kwd">int</span><span class="pln"> num</span><span class="pun">;</span>
+<span class="kwd">if</span><span class="pun">(</span><span class="pln">front</span><span class="pun">==-</span><span class="lit">1</span><span class="pun">)</span>
+<span class="pun">{</span><span class="pln">
+printf</span><span class="pun">(</span><span class="str">"Queue Empty"</span><span class="pun">);</span>
+<span class="kwd">return</span><span class="pun">;</span>
+<span class="pun">}</span>
+<span class="kwd">else</span>
+<span class="pun">{</span><span class="pln">
+num</span><span class="pun">=</span><span class="pln">cque</span><span class="pun">.</span><span class="pln">cqueue</span><span class="pun">[</span><span class="pln">front</span><span class="pun">];</span><span class="pln">
+printf</span><span class="pun">(</span><span class="str">"Deleted item : %d"</span><span class="pun">,</span><span class="pln">num</span><span class="pun">);</span>
+<span class="pun">}</span>
+<span class="kwd">if</span><span class="pun">(</span><span class="pln">front</span><span class="pun">==</span><span class="pln">rear</span><span class="pun">)</span>
+<span class="pun">{</span><span class="pln">
+front</span><span class="pun">=-</span><span class="lit">1</span><span class="pun">;</span>
+<span class="pun">}</span>
+<span class="kwd">else</span><span class="pln">
+front</span><span class="pun">=(</span><span class="pln">front</span><span class="pun">+</span><span class="lit">1</span><span class="pun">)%</span><span class="lit">3</span><span class="pun">;</span>
+<span class="pun">}</span>
+
+<span class="kwd">void</span><span class="pln"> display</span><span class="pun">()</span>
+<span class="pun">{</span>
+<span class="kwd">int</span><span class="pln"> i</span><span class="pun">;</span>
+<span class="kwd">if</span><span class="pun">(</span><span class="pln">front</span><span class="pun">==-</span><span class="lit">1</span><span class="pun">)</span>
+<span class="pun">{</span><span class="pln">
+printf</span><span class="pun">(</span><span class="str">"Queue Empty"</span><span class="pun">);</span></pre>
+    <h3>OUTPUT:-</h3>
+    <img src="queoutput.png"/>
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

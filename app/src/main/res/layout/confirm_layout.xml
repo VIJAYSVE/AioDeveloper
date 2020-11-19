@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="15dp"
+    android:background="#FFF2CD92"
+    android:layout_weight="2">
+
+    <TextView
+        android:id="@+id/rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="12dp"
+        android:layout_toRightOf="@+id/image"
+        android:text="Rate Us If u like Kit.!!"
+        android:textSize="20dp"
+        android:textStyle="normal|bold"/>
+
+    <TextView
+        android:id="@+id/exit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:text="Are u a Programmer ?"
+        android:textSize="20dp"
+        android:textStyle="normal|bold" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp"
+        app:srcCompat="@drawable/star"
+        tools:ignore="ContentDescription,RtlHardcoded" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp"
+        android:weightSum="3"
+        android:layout_below="@+id/exit"
+        android:id="@+id/linearLayout">
+
+        <Button
+            android:id="@+id/dialogButtonrate"
+            android:background="#FFEFB250"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="Rate"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:layout_weight="1"
+            />
+
+        <Space
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            />
+
+        <Button
+            android:id="@+id/dialogButtonNO"
+            android:background="#FFEFB250"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/dialogButtonrate"
+            android:text="NO"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            tools:ignore="RtlHardcoded,RtlSymmetry"
+            android:layout_weight="1"
+            />
+
+        <Space
+            android:layout_width="5dp"
+            android:layout_height="wrap_content"
+            />
+
+        <Button
+            android:id="@+id/dialogButtonYES"
+            android:background="#FFEFB250"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/dialogButtonNO"
+            android:text="YES"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</RelativeLayout>

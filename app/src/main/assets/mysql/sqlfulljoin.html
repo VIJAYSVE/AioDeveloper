@@ -1,0 +1,246 @@
+<h1 class="h1-tutorial" style="text-align: center;"><span style="font-size: 14pt;">SQL <span class="hh1"><span style="color: #ff6600;">FULL JOIN</span></span> Statement</span></h1>
+<div class="define">
+<ul>
+<li style="text-align: justify;"><span style="font-size: 12pt;"><span style="color: #008000;">FULL JOIN</span> returns all matching records from both tables whether the other table matches or not.</span></li>
+<li style="text-align: justify;"><span style="font-size: 12pt;"><span style="color: #008000;">FULL JOIN</span> can potentially return very large datasets.</span></li>
+<li style="text-align: justify;"><span style="font-size: 12pt;"><span style="color: #008000;">FULL JOIN</span> and <span style="color: #008000;">FULL OUTER JOIN</span> are the same.</span></li>
+</ul>
+<p style="text-align: justify;">&nbsp;</p>
+</div>
+<h1 class="h1-tutorial" style="text-align: justify;"><span style="font-size: 12pt;"><img class="img-responsive" style="display: block; margin-left: auto; margin-right: auto;" src="sql-full-join.png" /></span></h1>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-size: 12pt;">&nbsp;</span></p>
+<h2 style="text-align: justify;"><span style="font-size: 12pt;">The SQL FULL JOIN syntax</span></h2>
+<p style="text-align: justify;"><br /><span style="font-size: 12pt;">The general syntax is: </span></p>
+<ol class="linenums" style="text-align: justify;">
+<li class="L0"><span style="font-size: 12pt;"><span class="pln"><span style="color: #800000;">SELECT</span> column</span><span class="pun">-</span><span class="pln">names</span></span></li>
+<li class="L1"><span style="font-size: 12pt;"><span class="pln"> <span style="color: #800000;">FROM</span> table</span><span class="pun">-</span><span class="pln">name1 <span style="color: #800000;">FULL JOIN</span> table</span><span class="pun">-</span><span class="pln">name2 </span></span></li>
+<li class="L2"><span style="font-size: 12pt;"><span class="pln"> <span style="color: #800000;">ON</span> column</span><span class="pun">-</span><span class="pln">name1 </span><span class="pun">=</span><span class="pln"> column</span><span class="pun">-</span><span class="pln">name2</span></span></li>
+<li class="L3"><span class="pln" style="font-size: 12pt;"> <span style="color: #800000;">WHERE</span> condition</span></li>
+</ol>
+<p style="text-align: justify;"><br /><span style="font-size: 12pt;">The general <span style="color: #800000;">FULL OUTER JOIN</span> syntax is: </span></p>
+<ol class="linenums" style="text-align: justify;">
+<li class="L0"><span style="font-size: 12pt;"><span class="pln"> <span style="color: #800000;">SELECT</span> column</span><span class="pun">-</span><span class="pln">names</span></span></li>
+<li class="L1"><span style="font-size: 12pt;"><span class="pln"> <span style="color: #800000;">FROM</span> table</span><span class="pun">-</span><span class="pln">name1 <span style="color: #800000;">FULL OUTER JOIN</span> table</span><span class="pun">-</span><span class="pln">name2 </span></span></li>
+<li class="L2"><span style="font-size: 12pt;"><span class="pln"> <span style="color: #800000;">ON</span> column</span><span class="pun">-</span><span class="pln">name1 </span><span class="pun">=</span><span class="pln"> column</span><span class="pun">-</span><span class="pln">name2</span></span></li>
+<li class="L3"><span class="pln" style="font-size: 12pt;"> <span style="color: #800000;">WHERE</span> condition</span></li>
+</ol>
+<p style="text-align: justify;">&nbsp;</p>
+<h2 style="text-align: justify;"><span style="font-size: 12pt;">SQL FULL JOIN Examples:-</span></h2>
+<p style="text-align: justify;"><span class="pln" style="font-size: 12pt;"><strong>Problem: <span style="color: #008000;">Match all customers and suppliers by country </span></strong><br /><br /></span></p>
+<ol class="linenums" style="text-align: justify;">
+<li class="L0"><span style="font-size: 12pt;"><span class="pln">SELECT C</span><span class="pun">.</span><span class="typ">FirstName</span><span class="pun">,</span><span class="pln"> C</span><span class="pun">.</span><span class="typ">LastName</span><span class="pun">,</span><span class="pln"> C</span><span class="pun">.</span><span class="typ">Country</span><span class="pln"> AS </span><span class="typ">CustomerCountry</span><span class="pun">,</span> </span></li>
+<li class="L1"><span style="font-size: 12pt;"><span class="pln"> S</span><span class="pun">.</span><span class="typ">Country</span><span class="pln"> AS </span><span class="typ">SupplierCountry</span><span class="pun">,</span><span class="pln"> S</span><span class="pun">.</span><span class="typ">CompanyName</span></span></li>
+<li class="L2"><span style="font-size: 12pt;"><span class="pln"> FROM </span><span class="typ">Customer</span><span class="pln"> C FULL JOIN </span><span class="typ">Supplier</span><span class="pln"> S </span></span></li>
+<li class="L3"><span style="font-size: 12pt;"><span class="pln"> ON C</span><span class="pun">.</span><span class="typ">Country</span> <span class="pun">=</span><span class="pln"> S</span><span class="pun">.</span><span class="typ">Country</span></span></li>
+<li class="L4"><span style="font-size: 12pt;"><span class="pln"> ORDER BY C</span><span class="pun">.</span><span class="typ">Country</span><span class="pun">,</span><span class="pln"> S</span><span class="pun">.</span><span class="typ">Country</span></span></li>
+</ol>
+<p style="text-align: justify;"><span class="pln" style="font-size: 12pt;"><br />This returns suppliers that have no customers in their country, <br />and customers that have no suppliers in their country, <br />and customers and suppliers that are from the same country. <br /><br /><strong>Results:</strong> 195 records <br /><br /></span></p>
+<div class="table-hscroll">
+<table class="table table-striped table-condensed" style="width: 573px;">
+<tbody>
+<tr>
+<th style="width: 84px;"><span style="font-size: 12pt;">FirstName</span></th>
+<th style="width: 83px;"><span style="font-size: 12pt;">LastName</span></th>
+<th style="width: 141px;"><span style="font-size: 12pt;">CustomerCountry</span></th>
+<th style="width: 132px;"><span style="font-size: 12pt;">SupplierCountry</span></th>
+<th style="width: 133px;"><span style="font-size: 12pt;">CompanyName</span></th>
+</tr>
+<tr>
+<td class="null" style="width: 84px;"><span style="font-size: 12pt;">NULL</span></td>
+<td class="null" style="width: 83px;"><span style="font-size: 12pt;">NULL</span></td>
+<td class="null" style="width: 141px;"><span style="font-size: 12pt;">NULL</span></td>
+<td style="width: 132px;"><span style="font-size: 12pt;">Australia</span></td>
+<td style="width: 133px;"><span style="font-size: 12pt;">Pavlova, Ltd.</span></td>
+</tr>
+<tr>
+<td class="null" style="width: 84px;"><span style="font-size: 12pt;">NULL</span></td>
+<td class="null" style="width: 83px;"><span style="font-size: 12pt;">NULL</span></td>
+<td class="null" style="width: 141px;"><span style="font-size: 12pt;">NULL</span></td>
+<td style="width: 132px;"><span style="font-size: 12pt;">Australia</span></td>
+<td style="width: 133px;"><span style="font-size: 12pt;">G'day, Mate</span></td>
+</tr>
+<tr>
+<td class="null" style="width: 84px;"><span style="font-size: 12pt;">NULL</span></td>
+<td class="null" style="width: 83px;"><span style="font-size: 12pt;">NULL</span></td>
+<td class="null" style="width: 141px;"><span style="font-size: 12pt;">NULL</span></td>
+<td style="width: 132px;"><span style="font-size: 12pt;">Japan</span></td>
+<td style="width: 133px;"><span style="font-size: 12pt;">Tokyo Traders</span></td>
+</tr>
+<tr>
+<td class="null" style="width: 84px;"><span style="font-size: 12pt;">NULL</span></td>
+<td class="null" style="width: 83px;"><span style="font-size: 12pt;">NULL</span></td>
+<td class="null" style="width: 141px;"><span style="font-size: 12pt;">NULL</span></td>
+<td style="width: 132px;"><span style="font-size: 12pt;">Japan</span></td>
+<td style="width: 133px;"><span style="font-size: 12pt;">Mayumi's</span></td>
+</tr>
+<tr>
+<td class="null" style="width: 84px;"><span style="font-size: 12pt;">NULL</span></td>
+<td class="null" style="width: 83px;"><span style="font-size: 12pt;">NULL</span></td>
+<td class="null" style="width: 141px;"><span style="font-size: 12pt;">NULL</span></td>
+<td style="width: 132px;"><span style="font-size: 12pt;">Netherlands</span></td>
+<td style="width: 133px;"><span style="font-size: 12pt;">Zaanse Snoepfabriek</span></td>
+</tr>
+<tr>
+<td class="null" style="width: 84px;"><span style="font-size: 12pt;">NULL</span></td>
+<td class="null" style="width: 83px;"><span style="font-size: 12pt;">NULL</span></td>
+<td class="null" style="width: 141px;"><span style="font-size: 12pt;">NULL</span></td>
+<td style="width: 132px;"><span style="font-size: 12pt;">Singapore</span></td>
+<td style="width: 133px;"><span style="font-size: 12pt;">Leka Trading</span></td>
+</tr>
+<tr>
+<td style="width: 84px;"><span style="font-size: 12pt;">Patricio</span></td>
+<td style="width: 83px;"><span style="font-size: 12pt;">Simpson</span></td>
+<td style="width: 141px;"><span style="font-size: 12pt;">Argentina</span></td>
+<td class="null" style="width: 132px;"><span style="font-size: 12pt;">NULL</span></td>
+<td class="null" style="width: 133px;"><span style="font-size: 12pt;">NULL</span></td>
+</tr>
+<tr>
+<td style="width: 84px;"><span style="font-size: 12pt;">Yvonne</span></td>
+<td style="width: 83px;"><span style="font-size: 12pt;">Moncada</span></td>
+<td style="width: 141px;"><span style="font-size: 12pt;">Argentina</span></td>
+<td class="null" style="width: 132px;"><span style="font-size: 12pt;">NULL</span></td>
+<td class="null" style="width: 133px;"><span style="font-size: 12pt;">NULL</span></td>
+</tr>
+<tr>
+<td style="width: 84px;"><span style="font-size: 12pt;">Sergio</span></td>
+<td style="width: 83px;"><span style="font-size: 12pt;">Guti&eacute;rrez</span></td>
+<td style="width: 141px;"><span style="font-size: 12pt;">Argentina</span></td>
+<td class="null" style="width: 132px;"><span style="font-size: 12pt;">NULL</span></td>
+<td class="null" style="width: 133px;"><span style="font-size: 12pt;">NULL</span></td>
+</tr>
+<tr>
+<td style="width: 84px;"><span style="font-size: 12pt;">Georg</span></td>
+<td style="width: 83px;"><span style="font-size: 12pt;">Pipps</span></td>
+<td style="width: 141px;"><span style="font-size: 12pt;">Austria</span></td>
+<td class="null" style="width: 132px;"><span style="font-size: 12pt;">NULL</span></td>
+<td class="null" style="width: 133px;"><span style="font-size: 12pt;">NULL</span></td>
+</tr>
+<tr>
+<td style="width: 84px;"><span style="font-size: 12pt;">Roland</span></td>
+<td style="width: 83px;"><span style="font-size: 12pt;">Mendel</span></td>
+<td style="width: 141px;"><span style="font-size: 12pt;">Austria</span></td>
+<td class="null" style="width: 132px;"><span style="font-size: 12pt;">NULL</span></td>
+<td class="null" style="width: 133px;"><span style="font-size: 12pt;">NULL</span></td>
+</tr>
+<tr>
+<td style="width: 84px;"><span style="font-size: 12pt;">Pascale</span></td>
+<td style="width: 83px;"><span style="font-size: 12pt;">Cartrain</span></td>
+<td style="width: 141px;"><span style="font-size: 12pt;">Belgium</span></td>
+<td class="null" style="width: 132px;"><span style="font-size: 12pt;">NULL</span></td>
+<td class="null" style="width: 133px;"><span style="font-size: 12pt;">NULL</span></td>
+</tr>
+<tr>
+<td style="width: 84px;"><span style="font-size: 12pt;">Catherine</span></td>
+<td style="width: 83px;"><span style="font-size: 12pt;">Dewey</span></td>
+<td style="width: 141px;"><span style="font-size: 12pt;">Belgium</span></td>
+<td class="null" style="width: 132px;"><span style="font-size: 12pt;">NULL</span></td>
+<td class="null" style="width: 133px;"><span style="font-size: 12pt;">NULL</span></td>
+</tr>
+<tr>
+<td style="width: 84px;"><span style="font-size: 12pt;">Bernardo</span></td>
+<td style="width: 83px;"><span style="font-size: 12pt;">Batista</span></td>
+<td style="width: 141px;"><span style="font-size: 12pt;">Brazil</span></td>
+<td style="width: 132px;"><span style="font-size: 12pt;">Brazil</span></td>
+<td style="width: 133px;"><span style="font-size: 12pt;">Refrescos Americanas LTDA</span></td>
+</tr>
+<tr>
+<td style="width: 84px;"><span style="font-size: 12pt;">L&uacute;cia</span></td>
+<td style="width: 83px;"><span style="font-size: 12pt;">Carvalho</span></td>
+<td style="width: 141px;"><span style="font-size: 12pt;">Brazil</span></td>
+<td style="width: 132px;"><span style="font-size: 12pt;">Brazil</span></td>
+<td style="width: 133px;"><span style="font-size: 12pt;">Refrescos Americanas LTDA</span></td>
+</tr>
+<tr>
+<td style="width: 84px;"><span style="font-size: 12pt;">Janete</span></td>
+<td style="width: 83px;"><span style="font-size: 12pt;">Limeira</span></td>
+<td style="width: 141px;"><span style="font-size: 12pt;">Brazil</span></td>
+<td style="width: 132px;"><span style="font-size: 12pt;">Brazil</span></td>
+<td style="width: 133px;"><span style="font-size: 12pt;">Refrescos Americanas LTDA</span></td>
+</tr>
+<tr>
+<td style="width: 84px;"><span style="font-size: 12pt;">Aria</span></td>
+<td style="width: 83px;"><span style="font-size: 12pt;">Cruz</span></td>
+<td style="width: 141px;"><span style="font-size: 12pt;">Brazil</span></td>
+<td style="width: 132px;"><span style="font-size: 12pt;">Brazil</span></td>
+<td style="width: 133px;"><span style="font-size: 12pt;">Refrescos Americanas LTDA</span></td>
+</tr>
+<tr>
+<td style="width: 84px;"><span style="font-size: 12pt;">Andr&eacute;</span></td>
+<td style="width: 83px;"><span style="font-size: 12pt;">Fonseca</span></td>
+<td style="width: 141px;"><span style="font-size: 12pt;">Brazil</span></td>
+<td style="width: 132px;"><span style="font-size: 12pt;">Brazil</span></td>
+<td style="width: 133px;"><span style="font-size: 12pt;">Refrescos Americanas LTDA</span></td>
+</tr>
+<tr>
+<td style="width: 84px;"><span style="font-size: 12pt;">Mario</span></td>
+<td style="width: 83px;"><span style="font-size: 12pt;">Pontes</span></td>
+<td style="width: 141px;"><span style="font-size: 12pt;">Brazil</span></td>
+<td style="width: 132px;"><span style="font-size: 12pt;">Brazil</span></td>
+<td style="width: 133px;"><span style="font-size: 12pt;">Refrescos Americanas LTDA</span></td>
+</tr>
+<tr>
+<td style="width: 84px;"><span style="font-size: 12pt;">Pedro</span></td>
+<td style="width: 83px;"><span style="font-size: 12pt;">Afonso</span></td>
+<td style="width: 141px;"><span style="font-size: 12pt;">Brazil</span></td>
+<td style="width: 132px;"><span style="font-size: 12pt;">Brazil</span></td>
+<td style="width: 133px;"><span style="font-size: 12pt;">Refrescos Americanas LTDA</span></td>
+</tr>
+<tr>
+<td style="width: 84px;"><span style="font-size: 12pt;">Paula</span></td>
+<td style="width: 83px;"><span style="font-size: 12pt;">Parente</span></td>
+<td style="width: 141px;"><span style="font-size: 12pt;">Brazil</span></td>
+<td style="width: 132px;"><span style="font-size: 12pt;">Brazil</span></td>
+<td style="width: 133px;"><span style="font-size: 12pt;">Refrescos Americanas LTDA</span></td>
+</tr>
+<tr>
+<td style="width: 84px;"><span style="font-size: 12pt;">Anabela</span></td>
+<td style="width: 83px;"><span style="font-size: 12pt;">Domingues</span></td>
+<td style="width: 141px;"><span style="font-size: 12pt;">Brazil</span></td>
+<td style="width: 132px;"><span style="font-size: 12pt;">Brazil</span></td>
+<td style="width: 133px;"><span style="font-size: 12pt;">Refrescos Americanas LTDA</span></td>
+</tr>
+<tr>
+<td style="width: 84px;"><span style="font-size: 12pt;">Elizabeth</span></td>
+<td style="width: 83px;"><span style="font-size: 12pt;">Lincoln</span></td>
+<td style="width: 141px;"><span style="font-size: 12pt;">Canada</span></td>
+<td style="width: 132px;"><span style="font-size: 12pt;">Canada</span></td>
+<td style="width: 133px;"><span style="font-size: 12pt;">Ma Maison</span></td>
+</tr>
+<tr>
+<td style="width: 84px;"><span style="font-size: 12pt;">Elizabeth</span></td>
+<td style="width: 83px;"><span style="font-size: 12pt;">Lincoln</span></td>
+<td style="width: 141px;"><span style="font-size: 12pt;">Canada</span></td>
+<td style="width: 132px;"><span style="font-size: 12pt;">Canada</span></td>
+<td style="width: 133px;"><span style="font-size: 12pt;">For&ecirc;ts d'&eacute;rables</span></td>
+</tr>
+<tr>
+<td style="width: 84px;"><span style="font-size: 12pt;">Yoshi</span></td>
+<td style="width: 83px;"><span style="font-size: 12pt;">Tannamuri</span></td>
+<td style="width: 141px;"><span style="font-size: 12pt;">Canada</span></td>
+<td style="width: 132px;"><span style="font-size: 12pt;">Canada</span></td>
+<td style="width: 133px;"><span style="font-size: 12pt;">Ma Maison</span></td>
+</tr>
+<tr>
+<td style="width: 84px;"><span style="font-size: 12pt;">Yoshi</span></td>
+<td style="width: 83px;"><span style="font-size: 12pt;">Tannamuri</span></td>
+<td style="width: 141px;"><span style="font-size: 12pt;">Canada</span></td>
+<td style="width: 132px;"><span style="font-size: 12pt;">Canada</span></td>
+<td style="width: 133px;"><span style="font-size: 12pt;">For&ecirc;ts d'&eacute;rables</span></td>
+</tr>
+<tr>
+<td style="width: 84px;"><span style="font-size: 12pt;">Jean</span></td>
+<td style="width: 83px;"><span style="font-size: 12pt;">Fresni&egrave;re</span></td>
+<td style="width: 141px;"><span style="font-size: 12pt;">Canada</span></td>
+<td style="width: 132px;"><span style="font-size: 12pt;">Canada</span></td>
+<td style="width: 133px;"><span style="font-size: 12pt;">Ma Maison</span></td>
+</tr>
+<tr>
+<td style="width: 573px;" colspan="5"><span style="font-size: 12pt;"><img src="http://www.dofactory.com/Images/ellipsis.png" /></span></td>
+</tr>
+</tbody>
+</table>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;">&nbsp;</p>
+</div>
+

@@ -1,0 +1,31 @@
+<html>
+<body>
+
+
+
+<p style="text-align: left;"><span style="font-size: 18pt; color: #800000;">&nbsp; &nbsp; &nbsp; &nbsp; 2. Doubly Linked List:-</span><br />Doubly linked lists are very similar to singly linked lists. The only difference is<br />that each node has a reference to both the next and previous nodes in the list.</p>
+<p><img src="revsingle.png" /></p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: left;"><span style="font-size: 12pt;"><strong>2.2.1 Insertion:-</strong></span><br />The only major difference between the algorithm in &sect;2.1.1 is that we need to<br />remember to bind the previous pointer of n to the previous tail node if n was<br />not the first node to be inserted into the list.<br />1) algorithm Add(value)<br />2) Pre: value is the value to add to the list<br />3) Post: value has been placed at the tail of the list<br />4) n &larr; node(value)<br />5) if head = &empty;<br />6) head &larr; n<br />7) tail &larr; n<br />8) else<br />9) n.Previous &larr; tail<br />10) tail.Next &larr; n<br />11) tail &larr; n<br />12) end if<br />13) end Add<br />Figure 2.5 shows the doubly linked list after adding the sequence of integers<br />defined in &sect;2.1.1.</p>
+<p><img src="dll.png" /></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt;"><strong>2.2.2 Deletion:-</strong></span><br />As you may of guessed the cases that we use for deletion in a doubly linked<br />list are exactly the same as those defined in &sect;2.1.3. Like insertion we have the<br />added task of binding an additional reference (P revious) to the correct value.</p>
+<p>&nbsp;</p>
+<p>1) algorithm Remove(head, value)<br />2) Pre: head is the head node in the list<br />3) value is the value to remove from the list<br />4) Post: value is removed from the list, true; otherwise false<br />5) if head = &empty;<br />6) return false<br />7) end if<br />8) if value = head.Value<br />9) if head = tail<br />10) head &larr; &empty;<br />11) tail &larr; &empty;<br />12) else<br />13) head &larr; head.Next<br />14) head.Previous &larr; &empty;<br />15) end if<br />16) return true<br />17) end if<br />18) n &larr; head.Next<br />19) while n 6= &empty; and value 6= n.Value<br />20) n &larr; n.Next<br />21) end while<br />22) if n = tail<br />23) tail &larr; tail.Previous<br />24) tail.Next &larr; &empty;<br />25) return true<br />26) else if n 6= &empty;<br />27) n.Previous.Next &larr; n.Next<br />28) n.Next.Previous &larr; n.Previous<br />29) return true<br />30) end if<br />31) return false<br />32) end Remove</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 12pt;"><strong>2.2.3 Reverse Traversal:--</strong></span><br />Singly linked lists have a forward only design, which is why the reverse traversal<br />algorithm defined in &sect;2.1.5 required some creative invention. Doubly linked lists<br />make reverse traversal as simple as forward traversal (defined in &sect;2.1.4) except<br />that we start at the tail node and update the pointers in the opposite direction.<br />Figure 2.6 shows the reverse traversal algorithm in action.</p>
+<p>&nbsp;</p>
+<p><img src="dlll.png" /></p>
+<p>&nbsp;</p>
+<p>1)<strong> algorithm</strong>&nbsp;ReverseTraversal(tail)<br />2) Pre: tail is the tail node of the list to traverse<br />3) Post: the list has been traversed in reverse order<br />4) n &larr; tail<br />5) while n 6= &empty;<br />6) yield n.Value<br />7) n &larr; n.Previous<br />8) end while<br />9) end ReverseTraversal</p>
+
+
+
+
+
+
+
+
+</body>
+</html>

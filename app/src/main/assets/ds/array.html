@@ -1,0 +1,190 @@
+<html>
+<body>
+
+
+
+<h2 class="center">Array in Data Structure</h2>
+<p>An <strong>Array</strong> is a collection of similar data type value in a single variable. An array is a derived data type in C, which is constructed from fundamental data type of C language.</p>
+<p><img title="array" src="array.png" alt="array" /></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<h3>Insert element in array at specific position</h3>
+<div class="example">
+    <h2 class="example"><span style="color: #333399;">Insert element in Array-</span></h2>
+<pre class="prettyprint prettyprinted">
+<span class="com">#include</span><span class="str">&lt;stdio.h&gt;</span>
+<span class="com">#include</span><span class="str">&lt;conio.h&gt;</span>
+
+<span class="kwd">void</span><span class="pln"> main</span><span class="pun">()</span>
+  <span class="pun">{</span>
+  <span class="kwd">int</span><span class="pln"> i</span><span class="pun">,</span><span class="pln">a</span><span class="pun">[</span><span class="lit">5</span><span class="pun">],</span><span class="kwd">no</span><span class="pun">,</span><span class="pln">pos</span><span class="pun">;</span><span class="pln">
+  clrscr</span><span class="pun">();</span><span class="pln">
+  printf</span><span class="pun">(</span><span class="str">"Enter element in array: "</span><span class="pun">);</span>
+  <span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln">i</span><span class="pun">&lt;</span><span class="lit">5</span><span class="pun">;</span><span class="pln">i</span><span class="pun">++)</span>
+  <span class="pun">{</span><span class="pln">
+  scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,&amp;</span><span class="pln">a</span><span class="pun">[</span><span class="pln">i</span><span class="pun">]);</span>
+  <span class="pun">}</span><span class="pln">
+  printf</span><span class="pun">(</span><span class="str">"\nStored element in array: "</span><span class="pun">);</span>
+  <span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln">i</span><span class="pun">&lt;</span><span class="lit">5</span><span class="pun">;</span><span class="pln">i</span><span class="pun">++)</span>
+  <span class="pun">{</span><span class="pln">
+  printf</span><span class="pun">(</span><span class="str">"  %d"</span><span class="pun">,</span><span class="pln">a</span><span class="pun">[</span><span class="pln">i</span><span class="pun">]);</span>
+  <span class="pun">}</span><span class="pln">
+  printf</span><span class="pun">(</span><span class="str">"\nEnter position for enter element: "</span><span class="pun">);</span><span class="pln">
+  scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,&amp;</span><span class="pln">pos</span><span class="pun">);</span>
+  <span class="kwd">if</span><span class="pun">(</span><span class="pln">pos</span><span class="pun">&gt;</span><span class="lit">5</span><span class="pun">)</span>
+  <span class="pun">{</span><span class="pln">
+  printf</span><span class="pun">(</span><span class="str">"\nThis is out of range"</span><span class="pun">);</span>
+  <span class="pun">}</span>
+  <span class="kwd">else</span>
+  <span class="pun">{</span><span class="pln">
+  printf</span><span class="pun">(</span><span class="str">"\nEnter new element: "</span><span class="pun">);</span><span class="pln">
+  scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,&amp;</span><span class="kwd">no</span><span class="pun">);</span>
+  <span class="pun">--</span><span class="pln">pos</span><span class="pun">;</span>
+  <span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">5</span><span class="pun">;</span><span class="pln">i</span><span class="pun">&gt;=</span><span class="pln">pos</span><span class="pun">;</span><span class="pln">i</span><span class="pun">--)</span>
+  <span class="pun">{</span><span class="pln">
+  a</span><span class="pun">[</span><span class="pln">i</span><span class="pun">+</span><span class="lit">1</span><span class="pun">]=</span><span class="pln">a</span><span class="pun">[</span><span class="pln">i</span><span class="pun">];</span>
+  <span class="pun">}</span><span class="pln">
+  a</span><span class="pun">[</span><span class="pln">pos</span><span class="pun">]=</span><span class="kwd">no</span><span class="pun">;</span><span class="pln">
+  printf</span><span class="pun">(</span><span class="str">"\nStored data in array: "</span><span class="pun">);</span>
+  <span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln">i</span><span class="pun">&lt;</span><span class="lit">6</span><span class="pun">;</span><span class="pln">i</span><span class="pun">++)</span>
+  <span class="pun">{</span><span class="pln">
+  printf</span><span class="pun">(</span><span class="str">"  %d"</span><span class="pun">,</span><span class="pln">a</span><span class="pun">[</span><span class="pln">i</span><span class="pun">]);</span>
+  <span class="pun">}</span>
+  <span class="pun">}</span><span class="pln">
+  getch</span><span class="pun">();</span>
+  <span class="pun">}</span></pre>
+</div>
+<div class="example">
+    <h2 class="example">Output:-</h2>
+<pre class="prettyprint prettyprinted">
+<span class="typ">Enter</span><span class="pln"> elements </span><span class="kwd">in</span><span class="pln"> array</span><span class="pun">:</span> <span class="lit">4</span>
+<span class="lit">4</span>
+<span class="lit">2</span>
+<span class="lit">5</span>
+<span class="lit">7</span>
+<span class="typ">Stored</span><span class="pln"> data </span><span class="kwd">in</span><span class="pln"> array</span><span class="pun">:</span> <span class="lit">4</span> <span class="lit">2</span> <span class="lit">5</span> <span class="lit">7</span>
+<span class="typ">Enter</span><span class="pln"> position </span><span class="kwd">for</span><span class="pln"> enter element</span><span class="pun">:</span> <span class="lit">2</span>
+<span class="typ">Enter</span> <span class="kwd">new</span><span class="pln"> element</span><span class="pun">:</span> <span class="lit">8</span>
+<span class="typ">Stored</span><span class="pln"> data </span><span class="kwd">in</span><span class="pln"> array</span><span class="pun">:</span> <span class="lit">4</span> <span class="lit">2</span> <span class="lit">5</span> <span class="lit">7</span> <span class="lit">8<br /><br /><br /></span></pre>
+</div>
+<h3>Sort array elements</h3>
+<div class="example">
+    <h2 class="example"><span style="color: #333399;">Sort array element-</span></h2>
+<pre class="prettyprint prettyprinted">
+<span class="com">#include</span><span class="str">&lt;stdio.h&gt;</span>
+<span class="com">#include</span><span class="str">&lt;conio.h&gt;</span>
+
+<span class="kwd">void</span><span class="pln"> main</span><span class="pun">()</span>
+<span class="pun">{</span>
+<span class="kwd">int</span><span class="pln"> i</span><span class="pun">,</span><span class="pln">a</span><span class="pun">[</span><span class="lit">10</span><span class="pun">],</span><span class="pln">temp</span><span class="pun">,</span><span class="pln">j</span><span class="pun">;</span><span class="pln">
+clrscr</span><span class="pun">();</span><span class="pln">
+printf</span><span class="pun">(</span><span class="str">"Enter any 10 num in array: \n"</span><span class="pun">);</span>
+<span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln">i</span><span class="pun">&lt;=</span><span class="lit">10</span><span class="pun">;</span><span class="pln">i</span><span class="pun">++)</span>
+<span class="pun">{</span><span class="pln">
+scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,&amp;</span><span class="pln">a</span><span class="pun">[</span><span class="pln">i</span><span class="pun">]);</span>
+<span class="pun">}</span><span class="pln">
+printf</span><span class="pun">(</span><span class="str">"\nData before sorting: "</span><span class="pun">);</span>
+<span class="kwd">for</span><span class="pun">(</span><span class="pln">j</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln">j</span><span class="pun">&lt;</span><span class="lit">10</span><span class="pun">;</span><span class="pln">j</span><span class="pun">++)</span>
+<span class="pun">{</span><span class="pln">
+printf</span><span class="pun">(</span><span class="str">"  %d"</span><span class="pun">,</span><span class="pln">a</span><span class="pun">[</span><span class="pln">j</span><span class="pun">]);</span>
+<span class="pun">}</span>
+<span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln">i</span><span class="pun">&lt;=</span><span class="lit">10</span><span class="pun">;</span><span class="pln">i</span><span class="pun">++)</span>
+<span class="pun">{</span>
+<span class="kwd">for</span><span class="pun">(</span><span class="pln">j</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln">j</span><span class="pun">&lt;=</span><span class="lit">10</span><span class="pun">-</span><span class="pln">i</span><span class="pun">;</span><span class="pln">j</span><span class="pun">++)</span>
+<span class="pun">{</span>
+<span class="kwd">if</span><span class="pun">(</span><span class="pln">a</span><span class="pun">[</span><span class="pln">j</span><span class="pun">]&gt;</span><span class="pln">a</span><span class="pun">[</span><span class="pln">j</span><span class="pun">+</span><span class="lit">1</span><span class="pun">])</span>
+<span class="pun">{</span><span class="pln">
+temp</span><span class="pun">=</span><span class="pln">a</span><span class="pun">[</span><span class="pln">j</span><span class="pun">];</span><span class="pln">
+a</span><span class="pun">[</span><span class="pln">j</span><span class="pun">]=</span><span class="pln">a</span><span class="pun">[</span><span class="pln">j</span><span class="pun">+</span><span class="lit">1</span><span class="pun">];</span><span class="pln">
+a</span><span class="pun">[</span><span class="pln">j</span><span class="pun">+</span><span class="lit">1</span><span class="pun">]=</span><span class="pln">temp</span><span class="pun">;</span>
+<span class="pun">}</span>
+<span class="pun">}</span>
+<span class="pun">}</span><span class="pln">
+printf</span><span class="pun">(</span><span class="str">"\nData after sorting: "</span><span class="pun">);</span>
+<span class="kwd">for</span><span class="pun">(</span><span class="pln">j</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln">j</span><span class="pun">&lt;</span><span class="lit">10</span><span class="pun">;</span><span class="pln">j</span><span class="pun">++)</span>
+<span class="pun">{</span><span class="pln">
+printf</span><span class="pun">(</span><span class="str">"  %d"</span><span class="pun">,</span><span class="pln"> a</span><span class="pun">[</span><span class="pln">j</span><span class="pun">]);</span>
+<span class="pun">}</span><span class="pln">
+getch</span><span class="pun">();</span>
+<span class="pun">}</span></pre>
+</div>
+<div class="example">
+    <h2 class="example">Output:-</h2>
+<pre class="prettyprint prettyprinted">
+<span class="typ">Enter</span><span class="pln"> any </span><span class="lit">10</span><span class="pln"> num </span><span class="kwd">in</span><span class="pln"> array</span><span class="pun">:</span>
+<span class="lit">10</span>
+<span class="lit">50</span>
+<span class="lit">30</span>
+<span class="lit">20</span>
+<span class="lit">60</span>
+<span class="lit">80</span>
+<span class="lit">70</span>
+<span class="lit">90</span>
+<span class="lit">100</span>
+<span class="typ">Data</span><span class="pln"> before sorting</span><span class="pun">:</span> <span class="lit">10</span> <span class="lit">50</span> <span class="lit">30</span> <span class="lit">20</span> <span class="lit">60</span> <span class="lit">80</span> <span class="lit">70</span> <span class="lit">90</span> <span class="lit">100</span>
+<span class="typ">Data</span><span class="pln"> after sorting</span><span class="pun">:</span> <span class="lit">10</span> <span class="lit">20</span> <span class="lit">30</span> <span class="lit">40</span> <span class="lit">50</span> <span class="lit">60</span> <span class="lit">70</span> <span class="lit">80</span> <span class="lit">90</span> <span class="lit">100<br /><br /></span></pre>
+</div>
+<h3>Delete array element at specific position</h3>
+<div class="example">
+    <h2 class="example"><span style="color: #333399;">Delete element from Array-</span></h2>
+<pre class="prettyprint prettyprinted">
+<span class="com">#include</span><span class="str">&lt;stdio.h&gt;</span>
+<span class="com">#include</span><span class="str">&lt;conio.h&gt;</span>
+
+<span class="kwd">void</span><span class="pln"> main</span><span class="pun">()</span>
+ <span class="pun">{</span>
+ <span class="kwd">int</span><span class="pln"> i</span><span class="pun">,</span><span class="pln">a</span><span class="pun">[</span><span class="lit">5</span><span class="pun">],</span><span class="kwd">no</span><span class="pun">,</span><span class="pln">pos</span><span class="pun">;</span><span class="pln">
+ clrscr</span><span class="pun">();</span><span class="pln">
+ printf</span><span class="pun">(</span><span class="str">"Enter element in array: "</span><span class="pun">);</span>
+ <span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln">i</span><span class="pun">&lt;</span><span class="lit">5</span><span class="pun">;</span><span class="pln">i</span><span class="pun">++)</span>
+ <span class="pun">{</span><span class="pln">
+ scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,&amp;</span><span class="pln">a</span><span class="pun">[</span><span class="pln">i</span><span class="pun">]);</span>
+ <span class="pun">}</span><span class="pln">
+ printf</span><span class="pun">(</span><span class="str">"\nStored element in array: "</span><span class="pun">);</span>
+ <span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln">i</span><span class="pun">&lt;</span><span class="lit">5</span><span class="pun">;</span><span class="pln">i</span><span class="pun">++)</span>
+ <span class="pun">{</span><span class="pln">
+ printf</span><span class="pun">(</span><span class="str">"  %d"</span><span class="pun">,</span><span class="pln">a</span><span class="pun">[</span><span class="pln">i</span><span class="pun">]);</span>
+ <span class="pun">}</span><span class="pln">
+ printf</span><span class="pun">(</span><span class="str">"\nEnter poss. of element to delete: "</span><span class="pun">);</span><span class="pln">
+ scanf</span><span class="pun">(</span><span class="str">"%d"</span><span class="pun">,&amp;</span><span class="pln">pos</span><span class="pun">);</span>
+ <span class="kwd">if</span><span class="pun">(</span><span class="pln">pos</span><span class="pun">&gt;</span><span class="lit">5</span><span class="pun">)</span>
+ <span class="pun">{</span><span class="pln">
+ printf</span><span class="pun">(</span><span class="str">"\nThis value is out of range "</span><span class="pun">);</span>
+ <span class="pun">}</span>
+ <span class="kwd">else</span>
+ <span class="pun">{</span>
+ <span class="pun">--</span><span class="pln">pos</span><span class="pun">;</span>
+ <span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="pln">pos</span><span class="pun">;</span><span class="pln">i</span><span class="pun">&lt;=</span><span class="lit">4</span><span class="pun">;</span><span class="pln">i</span><span class="pun">++)</span>
+ <span class="pun">{</span><span class="pln">
+ a</span><span class="pun">[</span><span class="pln">i</span><span class="pun">]=</span><span class="pln">a</span><span class="pun">[</span><span class="pln">i</span><span class="pun">+</span><span class="lit">1</span><span class="pun">];</span>
+ <span class="pun">}</span><span class="pln">
+ printf</span><span class="pun">(</span><span class="str">"\nAfter deletion elements in array: "</span><span class="pun">);</span>
+ <span class="kwd">for</span><span class="pun">(</span><span class="pln">i</span><span class="pun">=</span><span class="lit">0</span><span class="pun">;</span><span class="pln">i</span><span class="pun">&lt;</span><span class="lit">4</span><span class="pun">;</span><span class="pln">i</span><span class="pun">++)</span>
+ <span class="pun">{</span><span class="pln">
+ printf</span><span class="pun">(</span><span class="str">"  %d"</span><span class="pun">,</span><span class="pln">a</span><span class="pun">[</span><span class="pln">i</span><span class="pun">]);</span>
+ <span class="pun">}</span>
+ <span class="pun">}</span><span class="pln">
+ getch</span><span class="pun">();</span>
+ <span class="pun">}</span>
+ </pre>
+</div>
+<div class="example">
+    <h2 class="example">Output:-</h2>
+<pre class="prettyprint prettyprinted">
+<span class="typ">Enter</span><span class="pln"> element </span><span class="kwd">in</span><span class="pln"> array</span><span class="pun">:</span> <span class="lit">10</span> <span class="lit">30</span> <span class="lit">50</span> <span class="lit">20</span>
+<span class="typ">Stored</span><span class="pln"> element </span><span class="kwd">in</span><span class="pln"> array</span><span class="pun">:</span> <span class="lit">10</span> <span class="lit">30</span> <span class="lit">50</span> <span class="lit">20</span>
+<span class="typ">Enter</span><span class="pln"> poss</span><span class="pun">.</span><span class="pln"> of element to </span><span class="kwd">delete</span><span class="pun">:</span> <span class="lit">3</span>
+<span class="typ">After</span><span class="pln"> deletion elements </span><span class="kwd">in</span><span class="pln"> array</span><span class="pun">:</span> <span class="lit">10</span> <span class="lit">30</span> <span class="lit">20</span></pre>
+</div>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+<html>
+<body>
+
+
+<ol class="java geshifilter-java">
+<li class="li1">
+<div class="de1"><span class="coMULTI">/*</span></div>
+</li>
+<li class="li1">
+<div class="de1"><span class="coMULTI">&nbsp; &nbsp; &nbsp; &nbsp; Hello World Applet Example</span></div>
+</li>
+<li class="li1">
+<div class="de1"><span class="coMULTI">&nbsp; &nbsp; &nbsp; &nbsp; This java example shows how to create and run Hello World Java Applet.</span></div>
+</li>
+<li class="li1">
+<div class="de1"><span class="coMULTI">*/</span></div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp;</div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp;</div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp;</div>
+</li>
+<li class="li1">
+<div class="de1"><span class="kw1">import</span>&nbsp;<span class="co2">java.applet.Applet</span><span class="sy0">;</span></div>
+</li>
+<li class="li1">
+<div class="de1"><span class="kw1">import</span>&nbsp;<span class="co2">java.awt.Graphics</span><span class="sy0">;</span></div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp;</div>
+</li>
+<li class="li1">
+<div class="de1"><span class="coMULTI">/*</span></div>
+</li>
+<li class="li1">
+<div class="de1"><span class="coMULTI">&nbsp;*</span></div>
+</li>
+<li class="li1">
+<div class="de1"><span class="coMULTI">&nbsp;* Applet can either run by browser or appletviewer application.</span></div>
+</li>
+<li class="li1">
+<div class="de1"><span class="coMULTI">&nbsp;* Define &lt;applet&gt; tag within comments as given below to speed up</span></div>
+</li>
+<li class="li1">
+<div class="de1"><span class="coMULTI">&nbsp;* the testing.</span></div>
+</li>
+<li class="li1">
+<div class="de1"><span class="coMULTI">&nbsp;*/</span></div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp;</div>
+</li>
+<li class="li1">
+<div class="de1"><span class="coMULTI">/*</span></div>
+</li>
+<li class="li1">
+<div class="de1"><span class="coMULTI">&lt;applet code="HelloWorldApplet" width=100 height=100&gt;</span></div>
+</li>
+<li class="li1">
+<div class="de1"><span class="coMULTI">&lt;/applet&gt;</span></div>
+</li>
+<li class="li1">
+<div class="de1"><span class="coMULTI">*/</span></div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp;</div>
+</li>
+<li class="li1">
+<div class="de1"><span class="co1">//every applet must extend from java.applet.Applet class</span></div>
+</li>
+<li class="li1">
+<div class="de1"><span class="kw1">public</span>&nbsp;<span class="kw1">class</span>&nbsp;HelloWorldApplet&nbsp;<span class="kw1">extends</span>&nbsp;<span class="kw3">Applet</span><span class="br0">{</span></div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp;</div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="coMULTI">/*</span></div>
+</li>
+<li class="li1">
+<div class="de1"><span class="coMULTI">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;* Override paint method.</span></div>
+</li>
+<li class="li1">
+<div class="de1"><span class="coMULTI">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;* paint method is called every time the applet needs to redisplay</span></div>
+</li>
+<li class="li1">
+<div class="de1"><span class="coMULTI">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;* it's output. For example, when applet is first displayed or applet</span></div>
+</li>
+<li class="li1">
+<div class="de1"><span class="coMULTI">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;* window is minimized and then restored.</span></div>
+</li>
+<li class="li1">
+<div class="de1"><span class="coMULTI">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;*</span></div>
+</li>
+<li class="li1">
+<div class="de1"><span class="coMULTI">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;*/</span></div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="kw1">public</span>&nbsp;<span class="kw4">void</span>&nbsp;paint<span class="br0">(</span><span class="kw3">Graphics</span>&nbsp;g<span class="br0">)</span><span class="br0">{</span></div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="coMULTI">/*</span></div>
+</li>
+<li class="li1">
+<div class="de1"><span class="coMULTI">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;* Use</span></div>
+</li>
+<li class="li1">
+<div class="de1"><span class="coMULTI">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;* void drawString(String str, int x, int y)</span></div>
+</li>
+<li class="li1">
+<div class="de1"><span class="coMULTI">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;* method to print the string at specified location x and y.</span></div>
+</li>
+<li class="li1">
+<div class="de1"><span class="coMULTI">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;*/</span></div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; g.<span class="me1">drawString</span><span class="br0">(</span><span class="st0">"Hello World"</span>,&nbsp;<span class="nu0">50</span>,&nbsp;<span class="nu0">50</span><span class="br0">)</span><span class="sy0">;</span></div>
+</li>
+<li class="li1">
+<div class="de1">&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<span class="br0">}</span></div>
+</li>
+<li class="li1">
+<div class="de1"><span class="br0">}</span></div>
+</li>
+</ol>
+<p>&nbsp;</p>
+<p><span class="br0">OUTPUT:--</span></p>
+<p>&nbsp;</p>
+<p>
+  <img src="HelloWorldApplet.jpg"/>
+</p>
+
+
+
+</body>
+</html>

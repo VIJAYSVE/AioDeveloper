@@ -1,0 +1,75 @@
+<p style="text-align: center;"><strong><span style="color: #0000ff; font-size: 14pt;">R- <span style="color: #008000;">Control Statements</span></span></strong></p>
+<p style="text-align: justify;"><span style="font-size: 12pt;"><span style="color: #0000ff;">R</span> programming provides three different types if statements that allows programmers to control their statements within source code. These are:</span></p>
+<ul style="text-align: justify;">
+    <li><span style="font-size: 12pt;">if statement</span></li>
+    <li><span style="font-size: 12pt;">if&hellip;.else statement</span></li>
+    <li><span style="font-size: 12pt;">switch statement</span></li>
+</ul>
+<p style="text-align: justify;">&nbsp;</p>
+<h2 style="text-align: center;"><span style="color: #0000ff;"><strong><span style="font-size: 13pt;">If statement</span></strong></span></h2>
+<p style="text-align: justify;"><span style="font-size: 12pt;">The <span style="color: #0000ff;">'if'</span> statement is the simplest form of decision controlling statement for conditional execution.&nbsp;It tells to program to execute a certain part of code only if particular condition or test is true.</span></p>
+<p><span style="font-size: 12pt;"><img style="display: block; margin-left: auto; margin-right: auto;" title="if statement" src="if-statement.png" alt="javascript if statement" /></span></p>
+<h2 style="text-align: justify;"><strong><span style="font-size: 12pt;">Example</span></strong></h2>
+<pre><span style="font-size: 12pt; color: #008000;">team_A &lt;- 5 # Number of wickets scored by Team A
+team_B &lt;- 2 # Number of wickets scored by Team B
+
+if (team_A &gt; team_B){
+    print ("Team A wins")
+}</span></pre>
+<p style="text-align: justify;"><span style="font-size: 12pt;">&nbsp;<span style="color: #0000ff;">result &minus;</span></span></p>
+<pre><span style="font-size: 12pt; color: #0000ff;">[1] "Team A wins"</span></pre>
+<pre class="result notranslate">&nbsp;</pre>
+<p style="text-align: center;"><span style="font-size: 13pt; color: #0000ff;"><strong>If-else Statement</strong></span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt;">The<span style="color: #0000ff;"> 'if'</span> statement is usually followed by an optional <span style="color: #0000ff;">'else'</span> statement that gets executes when the Boolean expression becomes false. This statement is used when you will be having multiple statements with multiple conditions to be executed.</span></p>
+<p><span class="example" style="font-size: 12pt;"><img style="display: block; margin-left: auto; margin-right: auto;" title="if else statement" src="if-else-statement.png" alt="javascript if else statement" /></span></p>
+<p style="text-align: justify;"><strong><span class="example" style="font-size: 12pt;">Example:</span></strong></p>
+<pre><span style="font-size: 12pt; color: #008000;">team_A &lt;- 2 # Number of goals scored by Team A
+team_B &lt;- 8 # Number of goals scored by Team B
+
+if (team_A &gt; team_B){
+    print ("Team A will make the playoffs")
+} else {
+    print ("Team B will make the playoffs")
+}</span></pre>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-size: 12pt; color: #0000ff;">Output:</span></p>
+<pre><span style="font-size: 12pt; color: #0000ff;">[1] "Team B will make the playoffs"</span></pre>
+<p style="text-align: justify;">&nbsp;</p>
+<div id="PageTitle" style="text-align: justify;">
+    <h1 style="text-align: center;"><span style="font-size: 13pt; color: #0000ff;"><strong>The Switch Statement</strong></span></h1>
+</div>
+<div id="PageContent">
+    <p style="text-align: justify;"><span style="font-size: 12pt;">The&nbsp;<code>switch()</code>&nbsp;function in R tests an expression against elements of a&nbsp;list. If the value evaluated from the expression matches item from the list, the corresponding value is returned.</span></p>
+    <h2 style="text-align: justify;"><strong><span style="font-size: 12pt;">Syntax of switch() function</span></strong></h2>
+<pre><span style="font-size: 12pt; color: #008000;"><code>switch (expression, list)
+</code></span></pre>
+    <p style="text-align: justify;"><span style="font-size: 12pt;">Here, the&nbsp;<var>expression</var>&nbsp;is evaluated and based on this value, the corresponding item in the list is returned.</span></p>
+    <p style="text-align: justify;"><span style="font-size: 12pt;">If the value evaluated from the&nbsp;<var>expression</var>&nbsp;matches with more than one item of the list,&nbsp;<code>switch()</code>&nbsp;function returns the first matched item.</span></p>
+    <p><span style="font-size: 12pt;"><img style="display: block; margin-left: auto; margin-right: auto;" title="Switch Statement" src="switch-statement.png" alt="switch statement javascript" /></span></p>
+    <p style="text-align: justify;">&nbsp;</p>
+    <p style="text-align: justify;"><span style="font-size: 12pt;">&nbsp;</span><span style="font-size: 12pt;"><strong>Example-1:</strong>&nbsp;</span></p>
+<pre><span style="font-size: 12pt; color: #008000;"><code>&gt; switch(1,"learn","r","programming")<br /><span style="color: #0000ff;">Output:-</span>
+<span style="color: #0000ff;">[1] "learn"</span><br />
+&gt; switch(3,"learn","r","programming")
+<span style="color: #0000ff;">Output:-</span><br /><span style="color: #0000ff;">[1] "programming"</span><br /><br /></code></span></pre>
+    <p style="text-align: justify;"><span style="font-size: 12pt;">In the above example,&nbsp;<span style="color: #0000ff;"><code>"learn","r","programming"</code></span>&nbsp;form a three item list.</span></p>
+    <p style="text-align: justify;"><span style="font-size: 12pt;">The&nbsp;<code>switch()</code>&nbsp;function returns the corresponding item to the numeric value evaluated.</span></p>
+    <p style="text-align: justify;"><span style="font-size: 12pt;"><strong>Note:</strong> If the numeric value is out of range (greater than the number of items in the list or smaller than 1), then,&nbsp;<code>NULL</code>&nbsp;is returned.</span></p>
+<pre><span style="font-size: 12pt; color: #008000;"><code>&gt; x &lt;- switch(0,"learn","r","programming")
+&gt; <span style="color: #0000ff;">x</span><br /><span style="color: #0000ff;">Output:-
+NULL<br />
+&gt;</span> x &lt;- switch(5,"learn","r","programming")
+&gt; <span style="color: #0000ff;">x</span><br /><span style="color: #0000ff;">Output:-
+NULL
+</span></code></span></pre>
+    <h2 style="text-align: justify;"><span style="font-size: 12pt;"><strong>Example-2:</strong> switch() Function with as String Expression</span></h2>
+    <p style="text-align: justify;"><span style="font-size: 12pt;">In this case, the matching named item&rsquo;s value is returned.</span></p>
+<pre><span style="font-size: 12pt;"><code><span style="color: #008000;">&gt; switch("color", "color" = "red", "shape" = "circle", "radius" = 8)</span>
+<br /><span style="color: #0000ff;">Output:-</span><br /><span style="color: #0000ff;">[1] "red"
+</span></code></span></pre>
+    <p style="text-align: justify;"><span style="font-size: 12pt;">Here,&nbsp;<code>"color"</code>&nbsp;is a string&nbsp; which matches with the first item of the list. Hence, we are getting&nbsp;<samp>&ldquo;red&rdquo;</samp>&nbsp;as an output.</span></p>
+<pre><span style="font-size: 12pt;"><code><span style="color: #008000;">&gt; switch("length", "color" = "red", "shape" = "circle", "radius" = 8)</span>
+<span style="color: #0000ff;">Output:-</span><br /><span style="color: #0000ff;">[1] 8
+</span></code></span></pre>
+    <p style="text-align: justify;"><span style="font-size: 12pt;">Similarly,&nbsp;<code>"length"</code>&nbsp;expression matches with the last item of the list. Hence, we are getting 8&nbsp;as an output.</span></p>
+</div>

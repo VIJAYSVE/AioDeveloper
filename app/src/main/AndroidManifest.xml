@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.vijay.aiodeveloper"
+    android:versionName="1.0">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="Programming Kit"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="Programming Kit"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activity.JavaListActivity"
+            android:label="Java Programs"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppThemeJava" />
+        <activity
+            android:name=".Activity.CListActivity"
+            android:label="C Programs"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppThemeC" />
+        <activity
+            android:name=".Activity.PythonActivity"
+            android:label="Python Programs"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppThemePython" />
+        <activity
+            android:name=".Activity.CPlusActivity"
+            android:label="C++ Programs"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppThemeCPlus" />
+        <activity
+            android:name=".Activity.SqlActivity"
+            android:label="Angular JS"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppThemeSql" />
+        <activity
+            android:name=".Activity.HtmlActivity"
+            android:label="Html Programs"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppThemeHtml" />
+        <activity
+            android:name=".Activity.JavaScriptActivity"
+            android:label="JavaScript Programs"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppThemeJavaScript" />
+        <activity
+            android:name=".Activity.CssActivity"
+            android:label="CSS Programs"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppThemeCss" />
+        <activity
+            android:name=".Activity.MySqlActivity"
+            android:label="SQL Programs"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppThemeMySql" />
+        <activity
+            android:name=".Activity.RListActivity"
+            android:label="R Language"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppThemeRlanguage" />
+
+        <activity
+            android:name=".Activity.DSProgramsListActivity"
+            android:label="Data Structures"
+            android:parentActivityName=".Activity.MicroListActivity"
+            android:theme="@style/AppThemeDataStructure" />
+        <activity
+            android:name=".Activity.WebViewActivity"
+            android:label="C Programs Details"
+            android:parentActivityName=".Activity.CListActivity" />
+        <activity
+            android:name=".Activity.MathListActivity"
+            android:label="Maths Formulas"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppThemeMath" />
+        <activity
+            android:name=".webviews.MathWebViewActivity"
+            android:label="Maths Formulas"
+            android:parentActivityName=".Activity.MathListActivity"
+            android:theme="@style/AppThemeMath" />
+        <activity
+            android:name=".Activity.MicroListActivity"
+            android:label="MicroProcessor 8085"
+            android:parentActivityName=".Activity.MathListActivity" />
+        <activity
+            android:name=".webviews.MicroWebViewActivity"
+            android:label="MicroProcessor 8085"
+            android:parentActivityName=".Activity.MicroListActivity" />
+        <activity
+            android:name=".webviews.CPlusWebViewActivity"
+            android:label="C++ Program Details"
+            android:parentActivityName=".Activity.CPlusActivity"
+            android:theme="@style/AppThemeCPlus" />
+        <activity
+            android:name=".webviews.PythonWebViewActivity"
+            android:label="Python Program Detail"
+            android:parentActivityName=".Activity.PythonActivity"
+            android:theme="@style/AppThemePython" />
+        <activity
+            android:name=".SplashAnim"
+            android:theme="@style/AppThemeSplash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".WelcomeActivity"
+            android:theme="@style/AppThemeWelcome" />
+        <activity
+            android:name=".webviews.JavaWebViewActivity"
+            android:label="Java Program Details"
+            android:parentActivityName=".Activity.JavaListActivity"
+            android:theme="@style/AppThemeJava" />
+        <activity
+            android:name=".webviews.DsWebViewActivity"
+            android:label="Data Structures"
+            android:parentActivityName=".Activity.MathListActivity"
+            android:theme="@style/AppThemeDataStructure" />
+        <activity
+            android:name=".webviews.HtmlWebViewActivity"
+            android:label="Html Program Details"
+            android:parentActivityName=".Activity.HtmlActivity"
+            android:theme="@style/AppThemeHtml" />
+        <activity
+            android:name=".webviews.JsWebViewActivity"
+            android:label="JavaScript Program Details"
+            android:parentActivityName=".Activity.JavaScriptActivity"
+            android:theme="@style/AppThemeJavaScript" />
+        <activity
+            android:name=".webviews.CssWebViewActivity"
+            android:label="CSS Program Details"
+            android:parentActivityName=".Activity.CssActivity"
+            android:theme="@style/AppThemeCss" />
+        <activity
+            android:name=".webviews.MySqlWebViewActivity"
+            android:label="SQL Program Details"
+            android:parentActivityName=".Activity.MySqlActivity"
+            android:theme="@style/AppThemeMySql" />
+        <activity
+            android:name=".webviews.RWebViewActivity"
+            android:label="R Topic Details"
+            android:parentActivityName=".Activity.MySqlActivity"
+            android:theme="@style/AppThemeRlanguage" />
+
+        <activity
+            android:name=".AboutActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".webviews.SqlWebViewActivity"
+            android:label="Angular JS"
+            android:parentActivityName=".Activity.SqlActivity"
+            android:theme="@style/AppThemeSql" />
+        <!--<activity android:name=".SignUpActivity" />-->
+        <!--<activity android:name=".SigninActivity" />-->
+        <!--<activity android:name=".ForgetPasswordActivity" />-->
+        <!--<activity android:name=".LoginActivity" />-->
+        <!--<activity android:name=".SignUp" />-->
+
+    </application>
+
+</manifest>

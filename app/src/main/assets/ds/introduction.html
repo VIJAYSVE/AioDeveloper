@@ -1,0 +1,85 @@
+<html>
+<body>
+
+
+
+
+
+
+<p style="text-align: center;"><span style="font-size: 18pt;"><strong>--INTRODUCTION--</strong></span></p>
+<h2 class="center">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Data Structure in C</h2>
+<p><strong>Data structures</strong> are used to store data in a computer in an organized form. In C language Different types of data structures are; Array, Stack, Queue, Linked List, Tree.</p>
+<ul class="list">
+    <li><strong>Array: </strong>Array is collection of similar data type, you can insert and deleted element form array without follow any order.</li>
+    <li><strong>Stack: </strong>Stack work on the basis of Last-In-First-Out (LIFO). Last entered element removed first.</li>
+    <li><strong>Queue: </strong>Queue work on the basis of First-In-First-Out (FIFO). First entered element removed first.</li>
+    <li><strong>Linked List: </strong>Linked list is the collection of node, Here you can insert and delete data in any order.</li>
+    <li><strong>Tree: </strong>Stores data in a non linear form with one root node and sub nodes.</li>
+</ul>
+<p>&nbsp;</p>
+<h2>Characteristics of a Data Structure</h2>
+<ul class="list">
+    <li>
+        <p><strong>Correctness</strong> &minus; Data structure implementation should implement its interface correctly.</p>
+    </li>
+    <li>
+        <p><strong>Time Complexity</strong> &minus; Running time or the execution time of operations of data structure must be as small as possible.</p>
+    </li>
+    <li>
+        <p><strong>Space Complexity</strong> &minus; Memory usage of a data structure operation should be as little as possible.</p>
+    </li>
+</ul>
+<p>&nbsp;</p>
+<h2>Need for Data Structure</h2>
+<p>As applications are getting complex and data rich, there are three common problems that applications face now-a-days.</p>
+<ul class="list">
+    <li>
+        <p><strong>Data Search</strong> &minus; Consider an inventory of 1 million(10<sup>6</sup>) items of a store. If the application is to search an item, it has to search an item in 1 million(10<sup>6</sup>) items every time slowing down the search. As data grows, search will become slower.</p>
+    </li>
+    <li>
+        <p><strong>Processor speed</strong> &minus; Processor speed although being very high, falls limited if the data grows to billion records.</p>
+    </li>
+    <li>
+        <p><strong>Multiple requests</strong> &minus; As thousands of users can search data simultaneously on a web server, even the fast server fails while searching the data.</p>
+    </li>
+</ul>
+<p>&nbsp;</p>
+<h3 class="voiletcolor"><span style="font-size: 14pt; color: #ff00ff;">Algorithm:-</span></h3>
+<p>An algorithm is a finite set instruction, which is written for solve any problem. Algorithm is not the complete code or program, it is just like a English language.</p>
+<p>&nbsp;</p>
+<h2>Execution Time Cases</h2>
+<p>There are three cases which are usually used to compare various data structure's execution time in a relative manner.</p>
+<ul class="list">
+    <li>
+        <p><strong>Worst Case</strong> &minus; This is the scenario where a particular data structure operation takes maximum time it can take. If an operation's worst case time is &fnof;(n) then this operation will not take more than &fnof;(n) time where &fnof;(n) represents function of n.</p>
+    </li>
+    <li>
+        <p><strong>Average Case</strong> &minus; This is the scenario depicting the average execution time of an operation of a data structure. If an operation takes &fnof;(n) time in execution, then m operations will take m&fnof;(n) time.</p>
+    </li>
+    <li>
+        <p><strong>Best Case</strong> &minus; This is the scenario depicting the least possible execution time of an operation of a data structure. If an operation takes &fnof;(n) time in execution, then the actual operation may take time as the random number which would be maximum as &fnof;(n).</p>
+    </li>
+</ul>
+<p>&nbsp;</p>
+<h2><span style="color: #008000;">Asymptotic Notations:-</span></h2>
+<h3>1.Big Oh Notation, &Omicron;</h3>
+<p>The notation &Omicron;(n) is the formal way to express the upper bound of an algorithm's running time. It measures the worst case time complexity or the longest amount of time an algorithm can possibly take to complete.</p>
+<p><img src="big_o_notation.png" alt="Big O Notation" /></p>
+<p>For example, for a function <strong><em>f</em>(n)</strong></p>
+<pre class="result notranslate">&Omicron;(<em>f</em>(n)) = { <em>g</em>(n) : there exists c &gt; 0 and n<sub>0</sub> such that <em>f</em>(n) &le; c.<em>g</em>(n) for all n &gt; n<sub>0</sub>. }<br /><br /></pre>
+<h3>2.Omega Notation, &Omega;</h3>
+<p>The notation &Omega;(n) is the formal way to express the lower bound of an algorithm's running time. It measures the best case time complexity or the best amount of time an algorithm can possibly take to complete.</p>
+<p><img src="omega_notaion" alt="Omega Notation" /></p>
+<p>For example, for a function <strong><em>f</em>(n)</strong></p>
+<pre class="result notranslate">&Omega;(<em>f</em>(n)) &ge; { <em>g</em>(n) : there exists c &gt; 0 and n<sub>0</sub> such that <em>g</em>(n) &le; c.<em>f</em>(n) for all n &gt; n<sub>0</sub>. }<br />
+</pre>
+<h3>3.Theta Notation, &theta;</h3>
+<p>The notation &theta;(n) is the formal way to express both the lower bound and the upper bound of an algorithm's running time. It is represented as follows &minus;</p>
+<p><img src="theta_notation" alt="Theta Notation" /></p>
+<pre class="result notranslate">&theta;(<em>f</em>(n)) = { <em>g</em>(n) if and only if <em>g</em>(n) =  &Omicron;(<em>f</em>(n)) and <em>g</em>(n) = &Omega;(<em>f</em>(n)) for all n &gt; n<sub>0</sub>. }</pre>
+
+
+
+
+</body>
+</html>

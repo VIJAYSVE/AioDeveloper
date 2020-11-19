@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="60dp"
+    android:text="ITEMS"
+    android:textColor="#fff"
+    android:textStyle="bold"
+    android:gravity="center_vertical"
+    android:drawableLeft="@mipmap/cssitem"
+    android:padding="10dp"
+    android:drawablePadding="10dp"
+    android:textSize="20dp"
+    android:background="#009688"
+    android:id="@+id/listitems_c">
+
+</TextView>

@@ -1,0 +1,51 @@
+<h1 style="text-align: center;"><span style="font-size: 14pt; color: #008000;"><strong><span style="font-family: verdana, geneva;"><span style="color: #0000ff;">R -</span> Pie Charts</span></strong></span></h1>
+<p style="text-align: justify;"><span style="font-size: 12pt; font-family: verdana, geneva;"><span style="color: #0000ff;">Pie chart</span> is drawn using the&nbsp;<code>pie()</code>&nbsp;function in R programming . This function takes in a&nbsp;vector&nbsp;of non-negative numbers.</span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt; font-family: verdana, geneva;"><span style="color: #0000ff;">Pie charts</span> are not recommended in the R documentation, and their features are somewhat limited. The authors recommend&nbsp;bar&nbsp;or&nbsp;dot plots&nbsp;over pie charts because people are able to judge length more accurately than volume.</span></p>
+<h2 style="text-align: justify;"><span style="font-size: 13pt;"><strong><span style="font-family: verdana, geneva;">Syntax</span></strong></span></h2>
+<p style="text-align: justify;"><span style="font-size: 12pt; font-family: verdana, geneva;">The basic syntax for creating a pie-chart using the <span style="color: #0000ff;">R</span> is &minus;</span></p>
+<pre class="result notranslate"><span style="font-size: 12pt; font-family: verdana, geneva;">pie(x, labels, radius, main, col, clockwise)
+</span></pre>
+<p style="text-align: justify;"><span style="font-size: 12pt; font-family: verdana, geneva;">Following is the description of the parameters used &minus;</span></p>
+<ul class="list" style="text-align: justify;">
+<li>
+<p><span style="font-size: 12pt; font-family: verdana, geneva;"><strong>x</strong>&nbsp;is a vector containing the numeric values used in the pie chart.</span></p>
+</li>
+<li>
+<p><span style="font-size: 12pt; font-family: verdana, geneva;"><strong>labels</strong>&nbsp;is used to give description to the slices.</span></p>
+</li>
+<li>
+<p><span style="font-size: 12pt; font-family: verdana, geneva;"><strong>radius</strong>&nbsp;indicates the radius of the circle of the pie chart.(value between &minus;1 and +1).</span></p>
+</li>
+<li>
+<p><span style="font-size: 12pt; font-family: verdana, geneva;"><strong>main</strong>&nbsp;indicates the title of the chart.</span></p>
+</li>
+<li>
+<p><span style="font-size: 12pt; font-family: verdana, geneva;"><strong>col</strong>&nbsp;indicates the color palette.</span></p>
+</li>
+<li>
+<p><span style="font-size: 12pt; font-family: verdana, geneva;"><strong>clockwise</strong>&nbsp;is a logical value indicating if the slices are drawn clockwise or anti clockwise.</span></p>
+</li>
+</ul>
+<h2><strong><span style="font-size: 13pt;">Example:</span></strong></h2>
+<p style="text-align: justify;"><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;"># Create data for the graph.</span><br /><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;">x &lt;- c(25, 62, 12, 53,31)</span><br /><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;">labels &lt;- c("Housing","Food","Cloths","Entertainment","Other")</span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;"># Give the chart file a name.</span><br /><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;">png(file = "city.jpg")</span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;"># Plot the chart.</span><br /><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;">pie(x,labels)</span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;"># Save the file.</span><br /><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;">dev.off()</span></p>
+<p style="text-align: justify;"><span style="font-size: 13pt;"><strong><span style="font-family: verdana, geneva;">Result &minus;</span></strong></span><span style="font-size: 12pt; font-family: verdana, geneva;"><img style="display: block; margin-left: auto; margin-right: auto;" src="pie1.png" width="446" height="446" /></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<h2 style="text-align: center;"><span style="color: #0000ff; font-size: 14pt;"><strong><span style="font-family: verdana, geneva;">Pie Chart Title and Colors</span></strong></span></h2>
+<p style="text-align: justify;"><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;"># Create data for the graph.</span></p>
+<p style="text-align: justify;"><span style="font-family: terminal, monaco; color: #008000; font-size: 12pt;">#the argument&nbsp;<code><span style="color: #ff00ff;">clockwise=TRUE</span></code>&nbsp;to draw the chart in clockwise fashion.</span><br /><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;">x &lt;- c(25, 62, 12, 53,31)</span><br /><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;">labels &lt;- c("Housing","Food","Cloths","Entertainment","Other")</span><br /><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;"># Plot the chart with title and rainbow color pallet.</span><br /><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;">pie(x, labels, main = "Expenditure pie chart",</span><br /><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;">col=c("red","orange","yellow","blue","green"),</span><br /><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;">border="brown",</span><br /><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;">clockwise=TRUE)</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: center;"><span style="font-size: 13pt;"><strong><span style="font-family: verdana, geneva;">Result -</span></strong></span><span style="font-size: 12pt; font-family: verdana, geneva;"><img style="display: block; margin-left: auto; margin-right: auto;" src="pie2.png" width="447" height="447" /></span><span style="font-size: 14pt; color: #0000ff;"><strong><span style="font-family: verdana, geneva;">Slice Percentages and Chart Legend</span></strong></span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;"># Pie Chart with Percentages</span><br /><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;">x &lt;- c(25, 62, 12, 53,31)</span><br /><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;">lbls &lt;- c("Housing","Food","Cloths","Entertainment","Other")</span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;">pct &lt;- round(x/sum(x)*100)</span><br /><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;">lbls &lt;- paste(lbls, pct)<span style="color: #ff00ff;"> # add percents to labels </span></span><br /><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;">lbls &lt;- paste(lbls,"%",sep="")<span style="color: #ff00ff;"> # ad % to labels </span></span><br /><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;">pie(x,labels = lbls, col=rainbow(length(lbls)),</span><br /><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;">main="Pie Chart of Countries",border="brown",)</span><br /><span style="font-size: 12pt; font-family: terminal, monaco; color: #ff00ff;">#legend</span><br /><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;">legend("topright", </span><br /><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;">c("Housing","Food","Cloths","Entertainment","Other"), </span><br /><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;">cex = 0.8,fill = rainbow(length(x)))</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-size: 13pt;"><strong><span style="font-family: verdana, geneva;">Result -</span></strong></span><span style="font-size: 12pt; font-family: verdana, geneva;"><img style="display: block; margin-left: auto; margin-right: auto;" src="pie3.png" width="489" height="489" /></span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<h2 style="text-align: center;"><span style="font-size: 14pt; color: #0000ff;"><strong><span style="font-family: verdana, geneva;">3D Pie Chart</span></strong></span></h2>
+<p style="text-align: justify;"><span style="font-size: 12pt; font-family: verdana, geneva;">The package&nbsp;plotrix&nbsp;has a function called&nbsp;<span style="color: #0000ff;">pie3D()</span> which&nbsp;provides 3D exploded pie charts.</span></p>
+<p style="text-align: justify;"><br /><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;"># 3D Exploded Pie Chart</span><br /><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;">library(plotrix)</span><br /><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;">x &lt;- c(25, 62, 12, 53,31)</span><br /><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;">lbls &lt;- c("Housing","Food","Cloths","Entertainment","Other")</span></p>
+<p style="text-align: justify;"><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;">pie3D(x,labels=lbls,explode=0.1,</span><br /><span style="font-size: 12pt; font-family: terminal, monaco; color: #008000;">main="Pie Chart of Expenditure ")</span></p>
+<p style="text-align: justify;">&nbsp;</p>
+<p style="text-align: justify;"><span style="font-size: 13pt;"><strong><span style="font-family: verdana, geneva;">Result -</span></strong></span><span style="font-size: 12pt; font-family: verdana, geneva;"><img style="display: block; margin-left: auto; margin-right: auto;" src="pie4.png" width="440" height="440" /></span></p>

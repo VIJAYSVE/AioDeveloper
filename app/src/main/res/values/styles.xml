@@ -1,0 +1,140 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#83be9f</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppThemeSplash" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#ffffff</item>
+        <item name="colorPrimaryDark">#ffffff</item>
+        <item name="colorAccent">#ffffff</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppThemeWelcome" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppThemeLogin" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">#FF3F51B5</item>
+        <item name="colorPrimaryDark">#FFFCC1AA</item>
+        <item name="colorAccent">#FFFF4081</item>
+        <item name="android:colorForeground">#FFFC8888</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <style name="AppThemeMath" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#78f4be</item>
+        <item name="colorPrimaryDark">#ebccef</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppThemeMicro" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#ef5350</item>
+        <item name="colorPrimaryDark">#ef5350</item>
+        <item name="colorAccent">#ef5350</item>
+    </style>
+
+    <style name="AppThemeDataStructure" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#c7bb85</item>
+        <item name="colorPrimaryDark">#ece6cc</item>
+        <item name="colorAccent">#ece6cc</item>
+    </style>
+
+    <style name="AppThemeJava" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#ef5350</item>
+        <item name="colorPrimaryDark">#efb250</item>
+        <item name="colorAccent">#efb250</item>
+    </style>
+
+    <style name="AppThemePython" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#85a7cf</item>
+        <item name="colorPrimaryDark">#fdf57c</item>
+        <item name="colorAccent">#fdf57c</item>
+    </style>
+
+    <style name="AppThemeC" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#4b8cc9</item>
+        <item name="colorPrimaryDark">#4b8cc9</item>
+        <item name="colorAccent">#4b8cc9</item>
+    </style>
+
+    <style name="AppThemeCPlus" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#ef5350</item>
+        <item name="colorPrimaryDark">#3c7faf</item>
+        <item name="colorAccent">#3c7faf</item>
+    </style>
+
+    <style name="AppThemeSql" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#426c9f</item>
+        <item name="colorPrimaryDark">#efb250</item>
+        <item name="colorAccent">#efb250</item>
+    </style>
+
+    <style name="AppThemeHtml" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#fc6e31</item>
+        <item name="colorAccent">#fc6e31</item>
+    </style>
+
+    <style name="AppThemeJavaScript" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#fdf57c</item>
+        <item name="colorAccent">#fdf57c</item>
+    </style>
+
+    <style name="AppThemeCss" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#da7775</item>
+        <item name="colorPrimaryDark">#009688</item>
+        <item name="colorAccent">#009688</item>
+    </style>
+
+    <style name="AppThemeMySql" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#da9275</item>
+        <item name="colorPrimaryDark">#e3275373</item>
+        <item name="colorAccent">#e3275373</item>
+    </style>
+
+    <style name="AppThemeRlanguage" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#009688</item>
+        <item name="colorPrimaryDark">#da7775</item>
+        <item name="colorAccent">#da7775</item>
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

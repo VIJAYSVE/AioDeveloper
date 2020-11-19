@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="ITEMS"
+    android:textStyle="bold"
+    android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+    android:background="#b2f5d8"
+    android:gravity="center_vertical"
+    android:drawableLeft="@drawable/ic_fx"
+    android:padding="15dp"
+    android:drawablePadding="10dp"
+    android:textSize="18dp"
+    android:id="@+id/listitems_maths">
+
+</TextView>

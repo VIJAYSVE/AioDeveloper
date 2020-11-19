@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#edcab6">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Developers"
+        android:textColor="#31af8a"
+        android:layout_marginTop="20dp"
+        android:id="@+id/dev"
+        android:textStyle="bold"
+        android:textSize="35dp"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat"
+        />
+
+    <ScrollView android:id="@+id/ScrollViewID"
+        android:layout_below="@+id/dev"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:padding="0dp"
+        android:layout_margin="5dp">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@android:color/transparent">
+    <RelativeLayout
+        android:id="@+id/rl1">
+        <ImageView
+            android:background="@mipmap/vijay"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:id="@+id/vijay"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"/>
+        <TextView
+            android:text="Vijay Verma"
+            android:textStyle="italic"
+            android:textColor="#447ec1"
+            android:textSize="26dp"
+            android:id="@+id/c"
+            android:padding="20dp"
+            android:layout_toRightOf="@+id/vijay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"/>
+        <TextView
+            android:layout_marginLeft="80dp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/facebook"
+            android:layout_below="@+id/c"/>
+    </RelativeLayout>
+    <android.support.v4.widget.Space
+        android:layout_height="25dp"/>
+        <RelativeLayout
+            android:id="@+id/rl2">
+            <ImageView
+                android:background="@mipmap/nitin"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:id="@+id/nitin"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentLeft="true"/>
+            <TextView
+                android:text="Nitin Goyal"
+                android:textStyle="italic"
+                android:textColor="#447ec1"
+                android:textSize="26dp"
+                android:padding="20dp"
+                android:id="@+id/n"
+                android:layout_toRightOf="@+id/nitin"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="80dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/facebook"
+                android:layout_below="@+id/n"/>
+        </RelativeLayout>
+        <android.support.v4.widget.Space
+            android:layout_height="25dp"/>
+        <RelativeLayout
+            android:id="@+id/rl3">
+            <ImageView
+                android:background="@mipmap/rishab"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:id="@+id/rishabh"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentLeft="true"/>
+            <TextView
+                android:text="Rishabh Jain"
+                android:textStyle="italic"
+                android:textColor="#447ec1"
+                android:id="@+id/r"
+                android:textSize="26dp"
+                android:padding="20dp"
+                android:layout_toRightOf="@+id/rishabh"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="80dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/facebook"
+                android:layout_below="@+id/r"/>
+        </RelativeLayout>
+        <android.support.v4.widget.Space
+            android:layout_height="25dp"/>
+        <RelativeLayout
+            android:id="@+id/rl4">
+            <ImageView
+                android:background="@mipmap/abhi"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:id="@+id/abhiskek"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentLeft="true"/>
+            <TextView
+                android:text="Abhishek Vats"
+                android:id="@+id/a"
+                android:textStyle="italic"
+                android:textColor="#447ec1"
+                android:textSize="26dp"
+                android:padding="20dp"
+                android:layout_toRightOf="@+id/abhiskek"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="80dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/facebook"
+                android:layout_below="@+id/a"/>
+        </RelativeLayout>
+        <android.support.v4.widget.Space
+            android:layout_height="25dp"/>
+        <RelativeLayout
+            android:id="@+id/rl5"
+            android:layout_marginBottom="15dp">
+            <ImageView
+                android:background="@mipmap/rajat"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:id="@+id/rajat"
+                android:layout_marginLeft="10dp"
+                android:layout_alignParentLeft="true"/>
+            <TextView
+                android:text="Rajat Gupta"
+                android:id="@+id/ra"
+                android:textColor="#447ec1"
+                android:textStyle="italic"
+                android:textSize="26dp"
+                android:padding="20dp"
+                android:layout_toRightOf="@+id/rajat"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="80dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/facebook"
+                android:layout_below="@+id/ra"
+                android:layout_marginBottom="10dp"/>
+        </RelativeLayout>
+    </TableLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

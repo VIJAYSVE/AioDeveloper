@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_about"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.vijay.aiodeveloper.AboutActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/li">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/aboutapp"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:layout_weight="1"
+        android:text="About App"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="#363636"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:background="#d4bcbc"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:id="@+id/aboutus"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:layout_weight="1"
+        android:text="About Us"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:textColor="#363636"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:background="#f2b38e"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_below="@+id/li"
+        android:background="#e2e1e1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_about">
+
+    </FrameLayout>
+
+
+</RelativeLayout>

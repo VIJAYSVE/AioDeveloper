@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_css"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.vijay.aiodeveloper.Activity.CssActivity">
+
+    <ListView
+        android:id="@+id/listviewcss"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#009688"
+        android:indicatorRight="?android:attr/expandableListPreferredItemIndicatorRight"
+        android:divider="#009688"
+        android:dividerHeight="1.5dp">
+
+    </ListView>
+
+</RelativeLayout>

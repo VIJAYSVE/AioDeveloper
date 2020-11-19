@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_micro_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.vijay.aiodeveloper.Activity.MicroListActivity">
+
+    <ListView
+        android:id="@+id/listviewmicro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f9fa96"
+        android:indicatorRight="?android:attr/expandableListPreferredItemIndicatorRight"
+        android:divider="#dab1e7"
+        android:dividerHeight="3dp">
+
+    </ListView>
+
+
+</RelativeLayout>
